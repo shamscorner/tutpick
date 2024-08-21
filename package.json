@@ -1,6 +1,6 @@
 {
-	"name": "dollaarr-app",
-	"version": "1.0.0",
+	"name": "tutpick",
+	"version": "0.0.0",
 	"private": true,
 	"author": {
 		"name": "Shamim Hossain",
@@ -30,6 +30,11 @@
 	"devDependencies": {
 		"@csstools/postcss-media-minmax": "^2.0.1",
 		"@playwright/test": "^1.46.1",
+		"@shamscorner/config-eslint": "^0.0.3",
+		"@shamscorner/config-tailwindcss": "^0.0.4",
+		"@shamscorner/shared": "^0.0.2",
+		"@shamscorner/svelte-shared": "^0.0.2",
+		"@shamscorner/svelte-ui": "^0.0.2",
 		"@sveltejs/adapter-auto": "^3.2.4",
 		"@sveltejs/adapter-vercel": "^5.4.3",
 		"@sveltejs/kit": "^2.5.24",
@@ -56,7 +61,7 @@
 		"tslib": "^2.6.3",
 		"typesafe-i18n": "^5.26.2",
 		"typescript": "^5.5.4",
-		"vite": "^5.4.1",
+		"vite": "^5.4.2",
 		"vitest": "^2.0.5",
 		"zod": "^3.23.8"
 	},
@@ -69,7 +74,7 @@
 		"date-fns": "^3.6.0",
 		"dotenv": "^16.4.5",
 		"formsnap": "^1.0.1",
-		"lucide-svelte": "^0.428.0",
+		"lucide-svelte": "^0.429.0",
 		"mode-watcher": "^0.4.1",
 		"sharp": "^0.33.5",
 		"stripe": "^16.8.0",
