@@ -1,0 +1,56 @@
+{
+	"[svelte]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "denoland.vscode-deno"
+	},
+	"cSpell.words": [
+		"clsx",
+		"csstools",
+		"dollaarr",
+		"fingerprintjs",
+		"fontaine",
+		"formsnap",
+		"gtag",
+		"localstorage",
+		"lucide",
+		"minmax",
+		"partytown",
+		"Postgrest",
+		"Prefs",
+		"sonner",
+		"stackter",
+		"supabase",
+		"superforms",
+		"taze",
+		"typesafe",
+		"zerodevx"
+	],
+	"deno.enablePaths": ["supabase/functions"],
+	"deno.lint": true,
+	"deno.unstable": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"eslint.validate": ["javascript", "typescript", "svelte"],
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"git.openRepositoryInParentFolders": "prompt",
+	"prettier.documentSelectors": ["src/**/*.svelte"],
+	"tailwindCSS.files.exclude": [
+		"**/.git/**",
+		"**/node_modules/**",
+		"**/.hg/**",
+		"**/.svn/**",
+		".husky/**",
+		".svelte-kit/**",
+		".vscode/**",
+		"static/**",
+		"tests/**",
+		"src/lib/i18n/**"
+	]
+}
