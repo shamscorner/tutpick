@@ -15,19 +15,19 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	/**
-	 * D​o​l​l​a​a​r​r
+	 * T​u​t​p​i​c​k
 	 */
 	appName: string
 	/**
-	 * D​o​l​l​a​a​r​r​ ​-​ ​B​u​y​ ​a​n​d​ ​S​e​l​l​ ​D​o​l​l​a​r​s​ ​a​t​ ​t​h​e​ ​B​e​s​t​ ​R​a​t​e​s
+	 * T​u​t​p​i​c​k​ ​-​ ​B​u​y​ ​a​n​d​ ​S​e​l​l​ ​D​o​l​l​a​r​s​ ​a​t​ ​t​h​e​ ​B​e​s​t​ ​R​a​t​e​s
 	 */
 	title: string
 	/**
-	 * D​o​l​l​a​a​r​r​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
+	 * T​u​t​p​i​c​k​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
 	 */
 	description: string
 	/**
-	 * B​u​y​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​,​ ​s​e​l​l​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​,​ ​b​e​s​t​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​r​a​t​e​s​,​ ​c​o​m​p​e​t​i​t​i​v​e​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​,​ ​s​e​c​u​r​e​ ​d​o​l​l​a​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​,​ ​o​n​l​i​n​e​ ​d​o​l​l​a​r​ ​m​a​r​k​e​t​p​l​a​c​e​,​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​p​l​a​t​f​o​r​m​,​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​,​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​ ​s​e​r​v​i​c​e​s​,​ ​h​a​s​s​l​e​-​f​r​e​e​ ​d​o​l​l​a​r​ ​t​r​a​d​i​n​g​,​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​c​o​m​m​u​n​i​t​y​,​ ​o​n​l​i​n​e​ ​d​o​l​l​a​r​ ​t​r​a​d​i​n​g​,​ ​d​o​l​l​a​r​ ​t​o​ ​l​o​c​a​l​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​,​ ​b​e​s​t​ ​p​l​a​c​e​ ​t​o​ ​b​u​y​ ​d​o​l​l​a​r​s​,​ ​b​e​s​t​ ​p​l​a​c​e​ ​t​o​ ​s​e​l​l​ ​d​o​l​l​a​r​s​,​ ​D​o​l​l​a​a​r​r
+	 * B​u​y​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​,​ ​s​e​l​l​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​,​ ​b​e​s​t​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​r​a​t​e​s​,​ ​c​o​m​p​e​t​i​t​i​v​e​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​,​ ​s​e​c​u​r​e​ ​d​o​l​l​a​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​,​ ​o​n​l​i​n​e​ ​d​o​l​l​a​r​ ​m​a​r​k​e​t​p​l​a​c​e​,​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​p​l​a​t​f​o​r​m​,​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​,​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​ ​s​e​r​v​i​c​e​s​,​ ​h​a​s​s​l​e​-​f​r​e​e​ ​d​o​l​l​a​r​ ​t​r​a​d​i​n​g​,​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​c​o​m​m​u​n​i​t​y​,​ ​o​n​l​i​n​e​ ​d​o​l​l​a​r​ ​t​r​a​d​i​n​g​,​ ​d​o​l​l​a​r​ ​t​o​ ​l​o​c​a​l​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​,​ ​b​e​s​t​ ​p​l​a​c​e​ ​t​o​ ​b​u​y​ ​d​o​l​l​a​r​s​,​ ​b​e​s​t​ ​p​l​a​c​e​ ​t​o​ ​s​e​l​l​ ​d​o​l​l​a​r​s​,​ ​T​u​t​p​i​c​k
 	 */
 	keywords: string
 	/**
@@ -130,11 +130,11 @@ type RootTranslation = {
 	}
 	appLogo: {
 		/**
-		 * D​o​l​l​a​a​r​r​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
+		 * T​u​t​p​i​c​k​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
 		 */
 		hrefTitle: string
 		/**
-		 * D​o​l​l​a​a​r​r​ ​L​o​g​o
+		 * T​u​t​p​i​c​k​ ​L​o​g​o
 		 */
 		alt: string
 	}
@@ -237,7 +237,7 @@ type RootTranslation = {
 		 */
 		title: string
 		/**
-		 * D​o​l​l​a​a​r​r​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
+		 * T​u​t​p​i​c​k​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
 		 */
 		subtitle: string
 	}
@@ -597,19 +597,19 @@ type RootTranslation = {
 
 export type TranslationFunctions = {
 	/**
-	 * Dollaarr
+	 * Tutpick
 	 */
 	appName: () => LocalizedString
 	/**
-	 * Dollaarr - Buy and Sell Dollars at the Best Rates
+	 * Tutpick - Buy and Sell Dollars at the Best Rates
 	 */
 	title: () => LocalizedString
 	/**
-	 * Dollaarr offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
+	 * Tutpick offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
 	 */
 	description: () => LocalizedString
 	/**
-	 * Buy dollars online, sell dollars online, best dollar exchange rates, competitive currency exchange, secure dollar transactions, online dollar marketplace, dollar exchange platform, real-time dollar rates, currency exchange services, hassle-free dollar trading, dollar exchange community, online dollar trading, dollar to local currency exchange, best place to buy dollars, best place to sell dollars, Dollaarr
+	 * Buy dollars online, sell dollars online, best dollar exchange rates, competitive currency exchange, secure dollar transactions, online dollar marketplace, dollar exchange platform, real-time dollar rates, currency exchange services, hassle-free dollar trading, dollar exchange community, online dollar trading, dollar to local currency exchange, best place to buy dollars, best place to sell dollars, Tutpick
 	 */
 	keywords: () => LocalizedString
 	/**
@@ -712,11 +712,11 @@ export type TranslationFunctions = {
 	}
 	appLogo: {
 		/**
-		 * Dollaarr offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
+		 * Tutpick offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
 		 */
 		hrefTitle: () => LocalizedString
 		/**
-		 * Dollaarr Logo
+		 * Tutpick Logo
 		 */
 		alt: () => LocalizedString
 	}
@@ -819,7 +819,7 @@ export type TranslationFunctions = {
 		 */
 		title: () => LocalizedString
 		/**
-		 * Dollaarr offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
+		 * Tutpick offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
 		 */
 		subtitle: () => LocalizedString
 	}

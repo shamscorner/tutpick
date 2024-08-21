@@ -1,6 +1,6 @@
 import type { BaseTranslation } from '../i18n-types';
 
-const productName = 'Dollaarr';
+const productName = 'Tutpick';
 const title = `${productName} - Buy and Sell Dollars at the Best Rates`;
 const description = `${productName} offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.`;
 

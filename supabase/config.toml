@@ -1,6 +1,6 @@
 # A string used to distinguish different Supabase projects on the same host. Defaults to the
 # working directory name when running `supabase init`.
-project_id = "dollaarr"
+project_id = "Tutpick"
 
 [api]
 enabled = true
@@ -122,11 +122,11 @@ max_frequency = "1s"
 
 # Uncomment to customize email template
 [auth.email.template.confirmation]
-subject = "Confirm Your Signup on Dollaarr"
+subject = "Confirm Your Signup on Tutpick"
 content_path = "./supabase/templates/confirmation.html"
 
 [auth.email.template.magic_link]
-subject = "Dollaarr Login Link"
+subject = "Tutpick Login Link"
 content_path = "./supabase/templates/magic-link.html"
 
 [auth.email.template.email_change]

@@ -1,7 +1,7 @@
 import type { Translation } from '../i18n-types';
 import en from '../en';
 
-const productName = 'Dollaarr';
+const productName = 'Tutpick';
 const title = `${productName} - একটি বিশেষ Sveltekit প্রোডাকশন-রেডি শুরু করার টেমপ্লেট`;
 const description = `${productName} একটি প্রোডাকশন-রেডি শুরু করার টেমপ্লেট সবেলটেকিটের জন্য। টেলওইন্ড সিএসএস, shadcn-svelte UI লাইব্রেরি, সুপারফর্ম + ফর্মস্ন্যাপ, টাইপ-সেফ i18n, এসইও, লটি অ্যানিমেশন, ইমেজ কম্পোনেন্ট এবং অনেক কিছু সম্মিলিত এই আপ্রোচটি ব্যবহার করে, আপনি সেটআপের ঘাঁটি পার করতে এবং আপনার স্বপ্নগুলি বাস্তবে পরিণত করতে পারেন।`;
 
