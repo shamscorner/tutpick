@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.886 26.826">
+    <g
+      id="shamscorner_logo"
+      data-name="shamscorner logo"
+      transform="translate(-122.433 -7209.727)"
+    >
+      <path
+        id="Path_1067"
+        data-name="Path 1067"
+        d="M122.795,7144.892s-14.96,16.547,0,11.776"
+        transform="translate(7.78 67.308)"
+        fill="none"
+        stroke="#415b81"
+        stroke-linecap="round"
+        stroke-width="3"
+      />
+      <path
+        id="Path_1068"
+        data-name="Path 1068"
+        d="M122.554,7144.892s-14.419,15.8,0,11.243"
+        transform="matrix(-0.999, 0.035, -0.035, -0.999, 506.181, 14370.623)"
+        fill="none"
+        stroke="#415b81"
+        stroke-linecap="round"
+        stroke-width="3"
+      />
+      <line
+        id="Line_8"
+        data-name="Line 8"
+        x1="14"
+        y2="21"
+        transform="translate(125.5 7212.5)"
+        fill="none"
+        stroke="#415b81"
+        stroke-linecap="round"
+        stroke-width="4"
+      />
+    </g>
+ </svg>
