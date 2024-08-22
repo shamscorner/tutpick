@@ -5,7 +5,7 @@
 	import { Button } from '$lib/components/ui/button';
 </script>
 
-<header class="sticky top-0 z-50 bg-gray-100 shadow-xl">
+<header class="sticky top-0 z-50 bg-secondary shadow-xl">
 	<div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
 		<Button href={PUBLIC_LANDING_PAGE} variant="outline" size="icon">
 			<Icons.home class="h-4 w-4" />
