@@ -1,5 +1,5 @@
 import { Dialog as SheetPrimitive } from 'bits-ui';
-import { tv,type VariantProps } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 import Content from './sheet-content.svelte';
 import Description from './sheet-description.svelte';
@@ -34,7 +34,8 @@ export {
 	Title as SheetTitle,
 	Trigger as SheetTrigger,
 	Title,
-	Trigger};
+	Trigger
+};
 
 export const sheetVariants = tv({
 	base: 'bg-background fixed z-50 gap-4 p-6 shadow-lg',

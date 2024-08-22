@@ -10,7 +10,8 @@
 		SheetPortal,
 		sheetTransitions,
 		sheetVariants,
-		type Side	} from './index.js';
+		type Side
+	} from './index.js';
 
 	type $$Props = SheetPrimitive.ContentProps & {
 		side?: Side;

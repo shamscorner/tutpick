@@ -30,4 +30,5 @@ export {
 	Value as SelectValue,
 	Separator,
 	Trigger,
-	Value};
+	Value
+};

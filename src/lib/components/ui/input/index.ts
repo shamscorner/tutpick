@@ -25,4 +25,5 @@ export type InputEvents = {
 export {
 	//
 	Root as Input,
-	Root};
+	Root
+};

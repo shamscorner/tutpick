@@ -3,7 +3,7 @@
 
 	import { cn } from '$lib/utils.js';
 
-	import { buttonVariants,type Events, type Props } from './index.js';
+	import { buttonVariants, type Events, type Props } from './index.js';
 
 	type $$Props = Props;
 	type $$Events = Events;

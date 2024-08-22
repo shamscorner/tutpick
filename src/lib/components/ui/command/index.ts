@@ -33,4 +33,5 @@ export {
 	Loading,
 	Root,
 	Separator,
-	Shortcut};
+	Shortcut
+};
