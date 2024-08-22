@@ -6,8 +6,6 @@ import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors';
 import { protectRoutes } from '$lib/auth/middlewares';
 import { detectLocale } from '$lib/i18n/i18n-util.js';
 
-import { initSupabase } from './supabase';
-
 async function urlRewrite({ event, resolve }) {
 	if (event.url.pathname.match(/[A-Z]/)) {
 		throw redirect(302, event.url.pathname.toLowerCase());
@@ -26,4 +24,4 @@ async function i18n({ event, resolve }) {
 	});
 }
 
-export const handle = sequence(urlRewrite, i18n, initSupabase, protectRoutes) satisfies Handle;
+export const handle = sequence(urlRewrite, i18n, protectRoutes) satisfies Handle;

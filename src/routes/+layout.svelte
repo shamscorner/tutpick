@@ -6,11 +6,12 @@
 		saveToLocalStorageWithExpiry
 	} from '@shamscorner/shared';
 	import Analytics from '@shamscorner/svelte-shared/components/Analytics';
+	import { setupConvex } from 'convex-svelte';
 	import { ModeWatcher } from 'mode-watcher';
 
-	import { invalidate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { PUBLIC_GOOGLE_TAG_MEASUREMENT_ID } from '$env/static/public';
+	import { PUBLIC_CONVEX_URL } from '$env/static/public';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import { setLocale } from '$lib/i18n/i18n-svelte';
 
@@ -21,21 +22,11 @@
 	export let data: LayoutData;
 
 	setLocale(data.locale);
-
-	let { supabase, session } = data;
-	$: ({ supabase, session } = data);
+	setupConvex(PUBLIC_CONVEX_URL);
 
 	onMount(() => {
 		saveReferralCode();
 		saveFirstPageVisit();
-
-		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
-			if (newSession?.expires_at !== session?.expires_at) {
-				invalidate('supabase:auth');
-			}
-		});
-
-		return () => data.subscription.unsubscribe();
 	});
 
 	function saveReferralCode() {

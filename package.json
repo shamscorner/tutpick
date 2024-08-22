@@ -22,8 +22,6 @@
 		"typesafe-i18n": "typesafe-i18n",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"gen-supabase-types:local": "npx supabase gen types --lang=typescript --local > src/lib/auth/database.types.ts",
-		"gen-supabase-types:remote": "npx supabase gen types --lang=typescript --project-id \"livhljteejssbhddbsnd\" --schema public > src/lib/auth/database.types.ts",
 		"listen-stripe": "stripe listen --forward-to localhost:5173/api/webhooks/stripe",
 		"trigger-stripe-payment": "stripe trigger payment_intent.succeeded",
 		"prepare": "husky"
@@ -55,7 +53,6 @@
 		"prettier-plugin-svelte": "^3.2.6",
 		"prettier-plugin-tailwindcss": "^0.6.6",
 		"resend": "^4.0.0",
-		"supabase": ">=1.190.0",
 		"svelte": "^4.2.18",
 		"svelte-check": "^3.8.5",
 		"sveltekit-superforms": "^2.17.0",
@@ -69,8 +66,6 @@
 	},
 	"dependencies": {
 		"@builder.io/partytown": "^0.10.2",
-		"@supabase/ssr": "^0.5.0",
-		"@supabase/supabase-js": "^2.45.1",
 		"arctic": "^1.9.2",
 		"bits-ui": "^0.21.13",
 		"clsx": "^2.1.1",
