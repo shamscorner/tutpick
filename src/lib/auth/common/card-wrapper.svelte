@@ -1,10 +1,5 @@
 <script lang="ts">
-	import {
-		Card,
-		CardContent,
-		CardFooter,
-		CardHeader
-	} from '@shamscorner/svelte-ui/components/card';
+	import { Card, CardContent, CardFooter, CardHeader } from '$lib/components/ui/card';
 
 	import AuthHeader from './auth-header.svelte';
 	import SocialOptions from './social-options.svelte';

@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { Heading } from '@shamscorner/svelte-ui/components/heading';
-
 	import Seo from '$lib/components/common/seo.svelte';
+	import { Heading } from '$lib/components/ui/heading';
 	import { LL } from '$lib/i18n/i18n-svelte';
 	import TransactionsTable from '$routes/(protected)/transactions/components/transactions-table/transactions-table.svelte';
 

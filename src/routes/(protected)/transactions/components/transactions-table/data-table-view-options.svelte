@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { TableViewModel } from 'svelte-headless-table';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as DropdownMenu from '@shamscorner/svelte-ui/components/dropdown-menu';
 	import MixerHorizontal from 'lucide-svelte/icons/chevron-down';
 
+	import { Button } from '$lib/components/ui/button';
+	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	import type { DataItem } from './types';

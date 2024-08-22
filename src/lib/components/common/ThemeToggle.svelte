@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
 	import Moon from 'lucide-svelte/icons/moon';
 	import Sun from 'lucide-svelte/icons/sun';
 	import { toggleMode } from 'mode-watcher';
+
+	import { Button } from '$lib/components/ui/button';
 </script>
 
 <Button on:click={toggleMode} variant="outline" size="icon">

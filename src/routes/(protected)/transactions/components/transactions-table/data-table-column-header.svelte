@@ -1,12 +1,13 @@
 <script lang="ts">
 	import type { TableViewModel } from 'svelte-headless-table';
-	import { cn } from '@shamscorner/svelte-ui';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as DropdownMenu from '@shamscorner/svelte-ui/components/dropdown-menu';
 	import ArrowDown from 'lucide-svelte/icons/arrow-down';
 	import CaretSort from 'lucide-svelte/icons/arrow-down-up';
 	import ArrowUp from 'lucide-svelte/icons/arrow-up';
 	import EyeNone from 'lucide-svelte/icons/x';
+
+	import { Button } from '$lib/components/ui/button';
+	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+	import { cn } from '$lib/utils';
 
 	import type { DataItem } from './types';
 

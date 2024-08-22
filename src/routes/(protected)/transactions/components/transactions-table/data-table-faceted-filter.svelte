@@ -1,12 +1,13 @@
 <script lang="ts">
-	import { cn } from '@shamscorner/svelte-ui';
-	import { Badge } from '@shamscorner/svelte-ui/components/badge';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as Command from '@shamscorner/svelte-ui/components/command';
-	import * as Popover from '@shamscorner/svelte-ui/components/popover';
-	import { Separator } from '@shamscorner/svelte-ui/components/separator';
 	import Check from 'lucide-svelte/icons/check';
 	import PlusCircled from 'lucide-svelte/icons/circle-plus';
+
+	import { Badge } from '$lib/components/ui/badge';
+	import { Button } from '$lib/components/ui/button';
+	import * as Command from '$lib/components/ui/command';
+	import * as Popover from '$lib/components/ui/popover';
+	import { Separator } from '$lib/components/ui/separator';
+	import { cn } from '$lib/utils';
 
 	import type { statuses } from './data';
 

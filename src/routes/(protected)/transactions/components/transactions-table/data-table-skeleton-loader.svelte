@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Skeleton } from '@shamscorner/svelte-ui/components/skeleton';
+	import { Skeleton } from '$lib/components/ui/skeleton';
 </script>
 
 <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">

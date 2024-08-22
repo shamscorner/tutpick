@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as Card from '@shamscorner/svelte-ui/components/card';
+	import { Button } from '$lib/components/ui/button';
+	import * as Card from '$lib/components/ui/card';
 </script>
 
 <Card.Root>

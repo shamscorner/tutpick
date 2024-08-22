@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as Sheet from '@shamscorner/svelte-ui/components/sheet';
 	import MenuIcon from 'lucide-svelte/icons/menu';
 
+	import { Button } from '$lib/components/ui/button';
+	import * as Sheet from '$lib/components/ui/sheet';
 	import { LL } from '$lib/i18n/i18n-svelte';
 	import HomeLink from '$routes/(protected)/components/home-link.svelte';
 

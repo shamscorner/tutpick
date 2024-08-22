@@ -1,7 +1,5 @@
 <script lang="ts">
 	import LottieAnimation from '@shamscorner/svelte-shared/components/LottieAnimation';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import { Heading } from '@shamscorner/svelte-ui/components/heading';
 	import Image from '@zerodevx/svelte-img';
 
 	import UserHiAnimationAsset from '$lib/assets/animations/user-hi.json';
@@ -9,6 +7,8 @@
 	import LoginButton from '$lib/auth/common/login-button.svelte';
 	import Seo from '$lib/components/common/seo.svelte';
 	import { Icons } from '$lib/components/icons';
+	import { Button } from '$lib/components/ui/button';
+	import { Heading } from '$lib/components/ui/heading';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	import type { PageData } from './$types';

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import * as Tooltip from '@shamscorner/svelte-ui/components/tooltip';
-
+	import * as Tooltip from '$lib/components/ui/tooltip';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	export let value: string;

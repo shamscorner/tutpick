@@ -10,11 +10,11 @@
 		addTableFilter
 	} from 'svelte-headless-table/plugins';
 	import { useDebounce } from '@shamscorner/shared';
-	import * as Table from '@shamscorner/svelte-ui/components/table';
 	import type { DateRange } from 'bits-ui';
 
 	import { browser } from '$app/environment';
 	import ScrollDownHint from '$lib/components/common/scroll-down-hint.svelte';
+	import * as Table from '$lib/components/ui/table';
 	import { addLoadMoreEvent } from '$lib/helpers';
 	import { LL } from '$lib/i18n/i18n-svelte';
 	import { fetchTransactions } from '$lib/transactions/client-transaction.service';

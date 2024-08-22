@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { cn } from '@shamscorner/svelte-ui';
-	import { Button, buttonVariants } from '@shamscorner/svelte-ui/components/button';
-	import * as Dialog from '@shamscorner/svelte-ui/components/dialog';
-
+	import { Button, buttonVariants } from '$lib/components/ui/button';
+	import * as Dialog from '$lib/components/ui/dialog';
 	import { LL } from '$lib/i18n/i18n-svelte';
+	import { cn } from '$lib/utils';
 
 	import type { PageData } from '../../../routes/(onboarding)/auth/login/$types';
 	import LoginForm from '../login/login-form.svelte';

@@ -1,11 +1,12 @@
 <script lang="ts">
 	import type { TableViewModel } from 'svelte-headless-table';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as Select from '@shamscorner/svelte-ui/components/select';
 	import ChevronLeft from 'lucide-svelte/icons/chevron-left';
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import DoubleArrowLeft from 'lucide-svelte/icons/chevrons-left';
 	import DoubleArrowRight from 'lucide-svelte/icons/chevrons-right';
+
+	import { Button } from '$lib/components/ui/button';
+	import * as Select from '$lib/components/ui/select';
 
 	import type { DataItem } from './types';
 

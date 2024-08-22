@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-
 	import { PUBLIC_LANDING_PAGE } from '$env/static/public';
 	import ThemeToggle from '$lib/components/common/ThemeToggle.svelte';
 	import { Icons } from '$lib/components/icons';
+	import { Button } from '$lib/components/ui/button';
 </script>
 
 <header class="sticky top-0 z-50 bg-gray-100 shadow-xl">

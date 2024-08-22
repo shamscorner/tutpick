@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { toast } from 'svelte-sonner';
-	import { cn } from '@shamscorner/svelte-ui';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
 	import TransactionsIcon from 'lucide-svelte/icons/arrow-right-left';
 	import HowToIcon from 'lucide-svelte/icons/circle-help';
 	import SavedCardsIcon from 'lucide-svelte/icons/credit-card';
@@ -10,7 +8,9 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import { appHomeRoute, howToRoute, savedCardsRoute, transactionsRoute } from '$lib/auth/routes';
+	import { Button } from '$lib/components/ui/button';
 	import { LL } from '$lib/i18n/i18n-svelte';
+	import { cn } from '$lib/utils';
 
 	export let isSheetMode = false;
 	export let onItemClicked: () => void = () => null;

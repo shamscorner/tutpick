@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as Sheet from '@shamscorner/svelte-ui/components/sheet';
 
+	import { Button } from '$lib/components/ui/button';
+	import * as Sheet from '$lib/components/ui/sheet';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	const dispatch = createEventDispatcher();

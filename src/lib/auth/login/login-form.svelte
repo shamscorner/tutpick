@@ -2,16 +2,16 @@
 	import { onMount } from 'svelte';
 	import { type AnalyticsDto, type FormStatus, getSiteAnalytics } from '@shamscorner/shared';
 	import { performFormValidation } from '@shamscorner/svelte-shared/services';
-	import * as Form from '@shamscorner/svelte-ui/components/form';
-	import { Input } from '@shamscorner/svelte-ui/components/input';
-	import { Label } from '@shamscorner/svelte-ui/components/label';
-	import { Switch } from '@shamscorner/svelte-ui/components/switch';
 
 	import { type Infer, superForm, type SuperValidated } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 
 	import { PUBLIC_APP_PAGE } from '$env/static/public';
 	import { Icons } from '$lib/components/icons';
+	import * as Form from '$lib/components/ui/form';
+	import { Input } from '$lib/components/ui/input';
+	import { Label } from '$lib/components/ui/label';
+	import { Switch } from '$lib/components/ui/switch';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	import { type FormSchema, formSchema } from './schema';

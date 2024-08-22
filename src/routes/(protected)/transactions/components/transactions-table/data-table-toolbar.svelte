@@ -1,13 +1,13 @@
 <script lang="ts">
 	import type { Writable } from 'svelte/store';
 	import type { TableViewModel } from 'svelte-headless-table';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import { DatePicker } from '@shamscorner/svelte-ui/components/date-picker';
-	import { Input } from '@shamscorner/svelte-ui/components/input';
 	import type { DateRange } from 'bits-ui';
 	import CircleClose from 'lucide-svelte/icons/circle-x';
 
 	import { browser } from '$app/environment';
+	import { Button } from '$lib/components/ui/button';
+	import { DatePicker } from '$lib/components/ui/date-picker';
+	import { Input } from '$lib/components/ui/input';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	import { statuses } from './data';

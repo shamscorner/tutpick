@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import { Label } from '@shamscorner/svelte-ui/components/label';
-	import * as Popover from '@shamscorner/svelte-ui/components/popover';
-	import { ScrollArea } from '@shamscorner/svelte-ui/components/scroll-area';
-	import { Switch } from '@shamscorner/svelte-ui/components/switch';
 	import { formatDistanceToNow } from 'date-fns';
 
 	import { Icons } from '$lib/components/icons';
+	import { Button } from '$lib/components/ui/button';
+	import { Label } from '$lib/components/ui/label';
+	import * as Popover from '$lib/components/ui/popover';
+	import { ScrollArea } from '$lib/components/ui/scroll-area';
+	import { Switch } from '$lib/components/ui/switch';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	const notifications = [

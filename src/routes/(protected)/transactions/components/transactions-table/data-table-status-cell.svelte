@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '@shamscorner/svelte-ui';
+	import { cn } from '$lib/utils';
 
 	import { statuses } from './data';
 

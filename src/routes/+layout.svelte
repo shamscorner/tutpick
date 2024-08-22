@@ -6,18 +6,17 @@
 		saveToLocalStorageWithExpiry
 	} from '@shamscorner/shared';
 	import Analytics from '@shamscorner/svelte-shared/components/Analytics';
-	import { Toaster } from '@shamscorner/svelte-ui/components/sonner';
 	import { ModeWatcher } from 'mode-watcher';
 
 	import { invalidate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { PUBLIC_GOOGLE_TAG_MEASUREMENT_ID } from '$env/static/public';
+	import { Toaster } from '$lib/components/ui/sonner';
 	import { setLocale } from '$lib/i18n/i18n-svelte';
 
 	import type { LayoutData } from './$types';
 
 	import '../app.postcss';
-	import '@shamscorner/svelte-ui/styles.css';
 
 	export let data: LayoutData;
 

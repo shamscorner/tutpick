@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Switch } from '@shamscorner/svelte-ui/components/switch';
 	import { mode as darkMode, toggleMode as toggleDarkMode } from 'mode-watcher';
 
 	import Seo from '$lib/components/common/seo.svelte';
+	import { Switch } from '$lib/components/ui/switch';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
 	$: isDarkMode = $darkMode === 'dark';

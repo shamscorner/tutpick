@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-
 	import { page } from '$app/stores';
 	import Seo from '$lib/components/common/seo.svelte';
+	import { Button } from '$lib/components/ui/button';
 	import { LL } from '$lib/i18n/i18n-svelte';
 </script>
 

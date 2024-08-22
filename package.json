@@ -34,7 +34,6 @@
 		"@shamscorner/config-tailwindcss": "^0.0.4",
 		"@shamscorner/shared": "^0.0.2",
 		"@shamscorner/svelte-shared": "^0.0.2",
-		"@shamscorner/svelte-ui": "^0.0.2",
 		"@sveltejs/adapter-auto": "^3.2.4",
 		"@sveltejs/adapter-vercel": "^5.4.3",
 		"@sveltejs/kit": "^2.5.24",
@@ -71,6 +70,10 @@
 		"@supabase/supabase-js": "^2.45.1",
 		"arctic": "^1.9.2",
 		"bits-ui": "^0.21.13",
+		"clsx": "^2.1.1",
+		"cmdk-sv": "^0.0.18",
+		"convex": "^1.14.3",
+		"convex-svelte": "^0.0.9",
 		"date-fns": "^3.6.0",
 		"dotenv": "^16.4.5",
 		"formsnap": "^1.0.1",
@@ -80,6 +83,7 @@
 		"stripe": "^16.8.0",
 		"svelte-headless-table": "^0.18.2",
 		"svelte-sonner": "^0.3.27",
+		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
 	}
 }

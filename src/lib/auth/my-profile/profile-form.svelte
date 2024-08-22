@@ -1,9 +1,6 @@
 <script lang="ts">
 	import type { FormStatus } from '@shamscorner/shared';
 	import { performFormValidation } from '@shamscorner/svelte-shared/services';
-	import * as Form from '@shamscorner/svelte-ui/components/form';
-	import { Input } from '@shamscorner/svelte-ui/components/input';
-	import { Label } from '@shamscorner/svelte-ui/components/label';
 
 	import { type Infer, superForm, type SuperValidated } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
@@ -11,6 +8,9 @@
 	import { type FormSchema, formSchema } from '$lib/auth/my-profile/schema';
 	import { type User } from '$lib/auth/types';
 	import { Icons } from '$lib/components/icons';
+	import * as Form from '$lib/components/ui/form';
+	import { Input } from '$lib/components/ui/input';
+	import { Label } from '$lib/components/ui/label';
 	import { LL } from '$lib/i18n/i18n-svelte';
 	// import { browser } from '$app/environment';
 

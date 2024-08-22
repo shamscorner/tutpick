@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { cn } from '@shamscorner/svelte-ui';
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-
 	import { Icons } from '$lib/components/icons';
+	import { Button } from '$lib/components/ui/button';
 	import { LL } from '$lib/i18n/i18n-svelte';
+	import { cn } from '$lib/utils';
 </script>
 
 <div class={cn('flex w-full items-center gap-x-2', $$restProps.class)}>

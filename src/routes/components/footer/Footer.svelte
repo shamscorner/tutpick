@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-
 	import { Icons } from '$lib/components/icons';
+	import { Button } from '$lib/components/ui/button';
 </script>
 
 <footer class="relative flex items-center justify-center gap-3 bg-secondary px-4 py-3">

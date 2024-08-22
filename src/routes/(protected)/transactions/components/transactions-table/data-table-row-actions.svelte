@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { Button } from '@shamscorner/svelte-ui/components/button';
-	import * as DropdownMenu from '@shamscorner/svelte-ui/components/dropdown-menu';
 	import DotsHorizontal from 'lucide-svelte/icons/ellipsis';
+
+	import { Button } from '$lib/components/ui/button';
+	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 
 	import { type DataItem, dataItemSchema } from './types';
 
