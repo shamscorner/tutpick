@@ -25,7 +25,8 @@
 		"gen-supabase-types:local": "npx supabase gen types --lang=typescript --local > src/lib/auth/database.types.ts",
 		"gen-supabase-types:remote": "npx supabase gen types --lang=typescript --project-id \"livhljteejssbhddbsnd\" --schema public > src/lib/auth/database.types.ts",
 		"listen-stripe": "stripe listen --forward-to localhost:5173/api/webhooks/stripe",
-		"trigger-stripe-payment": "stripe trigger payment_intent.succeeded"
+		"trigger-stripe-payment": "stripe trigger payment_intent.succeeded",
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@csstools/postcss-media-minmax": "^2.0.1",
@@ -44,6 +45,8 @@
 		"@zerodevx/svelte-img": "^2.1.0",
 		"autoprefixer": "^10.4.20",
 		"fontaine": "^0.5.0",
+		"husky": "^9.1.5",
+		"lint-staged": "^15.2.9",
 		"lottie-web": "^5.12.2",
 		"lucia": "^3.2.0",
 		"npm-run-all": "^4.1.5",
@@ -85,5 +88,16 @@
 		"svelte-sonner": "^0.3.27",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
+	},
+	"lint-staged": {
+		"**/*.{js,ts,jsx,json,svelte}": [
+			"eslint . --fix",
+			"prettier --write ."
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
 	}
 }
