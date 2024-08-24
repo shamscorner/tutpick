@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Card, CardContent, CardFooter, CardHeader } from '$lib/components/ui/card';
+	import { Card, CardContent, CardHeader } from '$lib/components/ui/card';
+	import { LL } from '$lib/i18n/i18n-svelte';
 
 	import AuthHeader from './auth-header.svelte';
 	import SocialOptions from './social-options.svelte';
@@ -13,11 +14,10 @@
 		<AuthHeader label={headerLabel}></AuthHeader>
 	</CardHeader>
 	<CardContent>
+		{#if showSocial}
+			<SocialOptions />
+			<div class="mt-4 text-center text-sm font-semibold">{$LL.common.or()}</div>
+		{/if}
 		<slot />
 	</CardContent>
-	{#if showSocial}
-		<CardFooter>
-			<SocialOptions />
-		</CardFooter>
-	{/if}
 </Card>
