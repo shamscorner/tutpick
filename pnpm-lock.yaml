@@ -26,6 +26,12 @@ importers:
       convex:
         specifier: ^1.14.3
         version: 1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      convex-ents:
+        specifier: ^0.11.0
+        version: 0.11.0(convex@1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      convex-helpers:
+        specifier: ^0.1.54
+        version: 0.1.54(convex@1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(zod@3.23.8)
       convex-svelte:
         specifier: ^0.0.9
         version: 0.0.9(convex@1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(svelte@5.0.0-next.233)
@@ -1675,6 +1681,27 @@ packages:
 
   console-control-strings@1.1.0:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
+
+  convex-ents@0.11.0:
+    resolution: {integrity: sha512-6LXkY2p3EXngU6/OiOoHxZr7WdRiytcbnN8Bjv6hyn+Vvne8KjfdsN8exWtA3GaJtKln7IrQPBDaMUm+zFvCHw==}
+    peerDependencies:
+      convex: ^1.13.0
+
+  convex-helpers@0.1.54:
+    resolution: {integrity: sha512-oYBjdfOUJdPRn9lPtH27B2rXsEPr2liiuFHIaZxgKhEwp/+f5uu1T8U5iOpNo+luavgjckO2IgNRBHnMmwfcSg==}
+    hasBin: true
+    peerDependencies:
+      convex: ^1.13.0
+      hono: ^4.0.5
+      react: ^17.0.2 || ^18.0.0
+      zod: ^3.22.4
+    peerDependenciesMeta:
+      hono:
+        optional: true
+      react:
+        optional: true
+      zod:
+        optional: true
 
   convex-svelte@0.0.9:
     resolution: {integrity: sha512-1Y903qD3dfeuqa/1PDjll892ElQVNK3FZo1u9xFHRye4FOfF8vCpgyVXeKplogFtHf65AOYAZaV3zl9zMJqBSA==}
@@ -5178,6 +5205,17 @@ snapshots:
       proto-list: 1.2.4
 
   console-control-strings@1.1.0: {}
+
+  convex-ents@0.11.0(convex@1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+    dependencies:
+      convex: 1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  convex-helpers@0.1.54(convex@1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(zod@3.23.8):
+    dependencies:
+      convex: 1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    optionalDependencies:
+      react: 18.3.1
+      zod: 3.23.8
 
   convex-svelte@0.0.9(convex@1.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(svelte@5.0.0-next.233):
     dependencies:
