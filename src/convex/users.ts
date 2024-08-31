@@ -2,7 +2,7 @@ import { v } from 'convex/values';
 import { generateIdFromEntropySize } from 'lucia';
 
 import { Id } from './_generated/dataModel';
-import { internalMutationWithAuth, queryWithAuth } from './auth/withAuth';
+import { mutationWithAuth, queryWithAuth } from './auth/withAuth';
 
 export const getSession = queryWithAuth({
 	args: {},
@@ -16,7 +16,7 @@ export const getSession = queryWithAuth({
 	}
 });
 
-export const login = internalMutationWithAuth({
+export const loginViaMagicLink = mutationWithAuth({
 	args: {
 		email: v.string()
 	},

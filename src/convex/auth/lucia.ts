@@ -11,6 +11,10 @@ declare module 'lucia' {
 interface DatabaseUserAttributes {
 	username?: string;
 	avatar?: string;
+	browserHash?: string;
+	landingPage?: string;
+	referralSiteUrl?: string;
+	isIncognitoMode?: string;
 }
 
 export function getAuth(db: DatabaseWriter) {
@@ -18,7 +22,11 @@ export function getAuth(db: DatabaseWriter) {
 		getUserAttributes: (attributes) => {
 			return {
 				username: attributes.username,
-				avatar: attributes.avatar
+				avatar: attributes.avatar,
+				browserHash: attributes.browserHash,
+				landingPage: attributes.landingPage,
+				referralSiteUrl: attributes.referralSiteUrl,
+				isIncognitoMode: attributes.isIncognitoMode
 			};
 		}
 	});
@@ -119,7 +127,11 @@ async function getUser(db: DatabaseReader, userId: string): Promise<DatabaseUser
 		id: user.id,
 		attributes: {
 			username: user.username || undefined,
-			avatar: user.avatar || undefined
+			avatar: user.avatar || undefined,
+			browserHash: user.browserHash || undefined,
+			landingPage: user.landingPage || undefined,
+			referralSiteUrl: user.referralSiteUrl || undefined,
+			isIncognitoMode: user.isIncognitoMode || undefined
 		}
 	};
 }

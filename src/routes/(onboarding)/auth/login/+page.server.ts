@@ -1,10 +1,12 @@
-import { isEmptyObject } from '@shamscorner/shared';
 import { fail } from '@sveltejs/kit';
 
 import { zod } from 'sveltekit-superforms/adapters';
 import { superValidate } from 'sveltekit-superforms/server';
 
+import { api } from '$convex/_generated/api';
 import { formSchema } from '$lib/auth/login/schema';
+import { client } from '$lib/convex';
+import { resend } from '$routes/services/email.service';
 
 import type { Actions, PageServerLoad } from './$types';
 
@@ -24,22 +26,33 @@ export const actions: Actions = {
 			});
 		}
 
-		const { email, browserHash, landingPage, referralSiteUrl, isIncognitoMode } = form.data;
+		const { email } = form.data;
 
-		const { supabase } = event.locals;
+		const { magicLink } = await client.mutation(api.users.loginViaMagicLink, {
+			email,
+			sessionId: null
+		});
 
-		const { error: errorResponse } = await supabase.auth.signInWithOtp({ email });
-
-		if (errorResponse && !isEmptyObject(errorResponse)) {
-			const { code, message } = errorResponse;
-
-			return fail(code ? +code : 401, {
+		if (!magicLink) {
+			return fail(401, {
 				form,
-				error: message
+				error: 'Failed to create login link'
 			});
 		}
 
-		// TODO: update users data to add the above meta data
+		const { error } = await resend.emails.send({
+			from: process.env.RESEND_API_FROM_EMAIL || 'onboarding@resend.dev',
+			to: email,
+			subject: 'No reply - Login link!',
+			html: `<a href="${magicLink}">${magicLink}</a>`
+		});
+
+		if (error) {
+			return fail(401, {
+				form,
+				error: 'Failed to send email'
+			});
+		}
 
 		return { form };
 	}

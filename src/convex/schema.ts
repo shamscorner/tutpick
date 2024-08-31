@@ -5,7 +5,11 @@ const users = defineEnt({
 	id: v.string(),
 	email: v.string(),
 	avatar: v.union(v.string(), v.null()),
-	username: v.union(v.string(), v.null())
+	username: v.union(v.string(), v.null()),
+	browserHash: v.union(v.string(), v.null()),
+	landingPage: v.union(v.string(), v.null()),
+	referralSiteUrl: v.union(v.string(), v.null()),
+	isIncognitoMode: v.union(v.string(), v.null())
 })
 	.index('byId', ['id'])
 	.index('byEmail', ['email']);
