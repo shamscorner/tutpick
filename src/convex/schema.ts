@@ -4,15 +4,17 @@ import { defineEnt, defineEntSchema, getEntDefinitions } from 'convex-ents';
 const users = defineEnt({
 	id: v.string(),
 	email: v.string(),
-	avatar: v.union(v.string(), v.null()),
-	username: v.union(v.string(), v.null()),
-	browserHash: v.union(v.string(), v.null()),
-	landingPage: v.union(v.string(), v.null()),
-	referralSiteUrl: v.union(v.string(), v.null()),
-	isIncognitoMode: v.union(v.string(), v.null())
+	name: v.optional(v.string()),
+	username: v.optional(v.string()),
+	avatar: v.optional(v.string()),
+	browserHash: v.optional(v.string()),
+	landingPage: v.optional(v.string()),
+	referralSiteUrl: v.optional(v.string()),
+	isIncognitoMode: v.optional(v.string())
 })
 	.index('byId', ['id'])
-	.index('byEmail', ['email']);
+	.index('byEmail', ['email'])
+	.index('byUsername', ['username']);
 
 const sessions = defineEnt({
 	id: v.string(),
@@ -22,9 +24,9 @@ const sessions = defineEnt({
 	.index('byId', ['id'])
 	.index('byUserId', ['user_id']);
 
-const providers = defineEnt({
+const accounts = defineEnt({
 	user_id: v.string(),
-	provider: v.union(v.string(), v.null())
+	provider: v.string()
 })
 	.index('byUserId', ['user_id'])
 	.index('byProviderUser', ['provider', 'user_id']);
@@ -38,7 +40,7 @@ const tokens = defineEnt({
 const schema = defineEntSchema({
 	users,
 	sessions,
-	providers,
+	accounts,
 	tokens
 });
 

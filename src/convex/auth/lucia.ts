@@ -9,6 +9,7 @@ declare module 'lucia' {
 }
 
 interface DatabaseUserAttributes {
+	name?: string;
 	username?: string;
 	avatar?: string;
 	browserHash?: string;
@@ -21,6 +22,7 @@ export function getAuth(db: DatabaseWriter) {
 	const lucia = new Lucia(new ConvexAdapter(db), {
 		getUserAttributes: (attributes) => {
 			return {
+				name: attributes.name,
 				username: attributes.username,
 				avatar: attributes.avatar,
 				browserHash: attributes.browserHash,
@@ -50,6 +52,9 @@ export class ConvexAdapter implements Adapter {
 	}
 
 	async setSession(session: DatabaseSession): Promise<void> {
+		console.log('session from setSession', session);
+		console.log('session get time', session.expiresAt.getTime());
+
 		await this.db.insert('sessions', {
 			id: session.id,
 			user_id: session.userId,
@@ -126,6 +131,7 @@ async function getUser(db: DatabaseReader, userId: string): Promise<DatabaseUser
 	return {
 		id: user.id,
 		attributes: {
+			name: user.name || undefined,
 			username: user.username || undefined,
 			avatar: user.avatar || undefined,
 			browserHash: user.browserHash || undefined,

@@ -28,9 +28,8 @@ export const actions: Actions = {
 
 		const { email } = form.data;
 
-		const { magicLink } = await client.mutation(api.users.loginViaMagicLink, {
-			email,
-			sessionId: null
+		const { magicLink } = await client.mutation(api.users.sendEmailLoginLink, {
+			email
 		});
 
 		if (!magicLink) {
