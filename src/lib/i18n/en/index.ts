@@ -1,8 +1,8 @@
 import type { BaseTranslation } from '../i18n-types';
 
 const productName = 'Tutpick';
-const title = `${productName} - Buy and Sell Dollars at the Best Rates`;
-const description = `${productName} offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.`;
+const title = `${productName} - Your one and only starter template for your next dream project.`;
+const description = `${productName} is a production ready starter template. It uses all the latest greatest technologies that setup out of the box. In this way you are saving a whole lot of time and your money. It is a perfect starting point for your next dream project. Do not spend time most of your time doing the same thing over and over again. Spend your time on the things that matter the most.`;
 
 const common = {
 	login: 'Login',
@@ -10,6 +10,7 @@ const common = {
 	signup: 'Sign up',
 	show: 'Show',
 	hide: 'Hide',
+	back: 'Back',
 	or: 'Or',
 	toggleTheme: 'Toggle theme',
 	close: 'Close',
@@ -34,7 +35,7 @@ const en: BaseTranslation = {
 	appName: productName,
 	title,
 	description,
-	keywords: `Buy dollars online, sell dollars online, best dollar exchange rates, competitive currency exchange, secure dollar transactions, online dollar marketplace, dollar exchange platform, real-time dollar rates, currency exchange services, hassle-free dollar trading, dollar exchange community, online dollar trading, dollar to local currency exchange, best place to buy dollars, best place to sell dollars, ${productName}`,
+	keywords: `${productName}, SvelteKit, TailwindCSS, TypeScript, Vite, Svelte, SvelteKit template, SvelteKit starter template, SvelteKit production ready template, SvelteKit production ready starter template, SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with Vite, SvelteKit production ready starter template with Svelte, SvelteKit production ready starter template with SvelteKit template, SvelteKit production ready starter template with SvelteKit starter template, SvelteKit production ready starter template with SvelteKit production ready template, SvelteKit production ready starter template with SvelteKit production ready starter template, SvelteKit production ready starter template with SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with SvelteKit production ready starter template with Vite, SvelteKit production ready starter template with SvelteKit production ready starter template with Svelte, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit starter template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with SvelteKit production ready starter template with Vite, SvelteKit production ready starter template with SvelteKit production ready starter template with Svelte, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit starter template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with SvelteKit production ready starter template, ${productName}`,
 	appTwitterAccount: '@shamscorner',
 
 	common,
@@ -45,10 +46,10 @@ const en: BaseTranslation = {
 	},
 
 	schemaMarkup: {
-		type: 'Corporation',
-		name: 'Memowise Inc.',
+		type: 'LLC',
+		name: 'shamscorner LLC',
 		markupDescription:
-			'Memowise is a software company that builds products to help people. We are a small team of passionate developers, designers, and entrepreneurs. We are based in Dhaka, Bangladesh.',
+			'shamscorner LLC is a software company that builds products to help people. We are a small team of passionate developers, designers, and entrepreneurs. We are based in Dhaka, Bangladesh.',
 		founder: [
 			{
 				type: 'Person',
@@ -67,7 +68,7 @@ const en: BaseTranslation = {
 		contactPoint: [
 			{
 				type: 'ContactPoint',
-				email: 'memowiseinc@gmail.com',
+				email: 'support@shamscorner.com',
 				telephone: '',
 				contactType: 'customer service'
 			}
@@ -84,7 +85,7 @@ const en: BaseTranslation = {
 	},
 
 	homepage: {
-		title: 'A production ready starter template for SvelteKit.',
+		title,
 		subtitle: description
 	},
 
@@ -99,9 +100,6 @@ const en: BaseTranslation = {
 			email: 'Email',
 			password: 'Password',
 			submit: 'Send Magic Link',
-			continueWith: 'Or continue with',
-			dontHaveAccount: "Don't have an account?",
-			forgotPassword: 'Forgot password?',
 			rememberMe: 'Remember me?',
 			continueWithGoogle: 'Continue with Google',
 			success: 'Login link sent to your email. Use the link to login.'

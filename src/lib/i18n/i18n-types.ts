@@ -19,15 +19,15 @@ type RootTranslation = {
 	 */
 	appName: string
 	/**
-	 * T​u​t​p​i​c​k​ ​-​ ​B​u​y​ ​a​n​d​ ​S​e​l​l​ ​D​o​l​l​a​r​s​ ​a​t​ ​t​h​e​ ​B​e​s​t​ ​R​a​t​e​s
+	 * T​u​t​p​i​c​k​ ​-​ ​Y​o​u​r​ ​o​n​e​ ​a​n​d​ ​o​n​l​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​f​o​r​ ​y​o​u​r​ ​n​e​x​t​ ​d​r​e​a​m​ ​p​r​o​j​e​c​t​.
 	 */
 	title: string
 	/**
-	 * T​u​t​p​i​c​k​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
+	 * T​u​t​p​i​c​k​ ​i​s​ ​a​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​.​ ​I​t​ ​u​s​e​s​ ​a​l​l​ ​t​h​e​ ​l​a​t​e​s​t​ ​g​r​e​a​t​e​s​t​ ​t​e​c​h​n​o​l​o​g​i​e​s​ ​t​h​a​t​ ​s​e​t​u​p​ ​o​u​t​ ​o​f​ ​t​h​e​ ​b​o​x​.​ ​I​n​ ​t​h​i​s​ ​w​a​y​ ​y​o​u​ ​a​r​e​ ​s​a​v​i​n​g​ ​a​ ​w​h​o​l​e​ ​l​o​t​ ​o​f​ ​t​i​m​e​ ​a​n​d​ ​y​o​u​r​ ​m​o​n​e​y​.​ ​I​t​ ​i​s​ ​a​ ​p​e​r​f​e​c​t​ ​s​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​f​o​r​ ​y​o​u​r​ ​n​e​x​t​ ​d​r​e​a​m​ ​p​r​o​j​e​c​t​.​ ​D​o​ ​n​o​t​ ​s​p​e​n​d​ ​t​i​m​e​ ​m​o​s​t​ ​o​f​ ​y​o​u​r​ ​t​i​m​e​ ​d​o​i​n​g​ ​t​h​e​ ​s​a​m​e​ ​t​h​i​n​g​ ​o​v​e​r​ ​a​n​d​ ​o​v​e​r​ ​a​g​a​i​n​.​ ​S​p​e​n​d​ ​y​o​u​r​ ​t​i​m​e​ ​o​n​ ​t​h​e​ ​t​h​i​n​g​s​ ​t​h​a​t​ ​m​a​t​t​e​r​ ​t​h​e​ ​m​o​s​t​.
 	 */
 	description: string
 	/**
-	 * B​u​y​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​,​ ​s​e​l​l​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​,​ ​b​e​s​t​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​r​a​t​e​s​,​ ​c​o​m​p​e​t​i​t​i​v​e​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​,​ ​s​e​c​u​r​e​ ​d​o​l​l​a​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​,​ ​o​n​l​i​n​e​ ​d​o​l​l​a​r​ ​m​a​r​k​e​t​p​l​a​c​e​,​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​p​l​a​t​f​o​r​m​,​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​,​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​ ​s​e​r​v​i​c​e​s​,​ ​h​a​s​s​l​e​-​f​r​e​e​ ​d​o​l​l​a​r​ ​t​r​a​d​i​n​g​,​ ​d​o​l​l​a​r​ ​e​x​c​h​a​n​g​e​ ​c​o​m​m​u​n​i​t​y​,​ ​o​n​l​i​n​e​ ​d​o​l​l​a​r​ ​t​r​a​d​i​n​g​,​ ​d​o​l​l​a​r​ ​t​o​ ​l​o​c​a​l​ ​c​u​r​r​e​n​c​y​ ​e​x​c​h​a​n​g​e​,​ ​b​e​s​t​ ​p​l​a​c​e​ ​t​o​ ​b​u​y​ ​d​o​l​l​a​r​s​,​ ​b​e​s​t​ ​p​l​a​c​e​ ​t​o​ ​s​e​l​l​ ​d​o​l​l​a​r​s​,​ ​T​u​t​p​i​c​k
+	 * T​u​t​p​i​c​k​,​ ​S​v​e​l​t​e​K​i​t​,​ ​T​a​i​l​w​i​n​d​C​S​S​,​ ​T​y​p​e​S​c​r​i​p​t​,​ ​V​i​t​e​,​ ​S​v​e​l​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​a​i​l​w​i​n​d​C​S​S​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​y​p​e​S​c​r​i​p​t​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​V​i​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​a​i​l​w​i​n​d​C​S​S​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​y​p​e​S​c​r​i​p​t​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​V​i​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​a​i​l​w​i​n​d​C​S​S​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​y​p​e​S​c​r​i​p​t​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​V​i​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​t​e​m​p​l​a​t​e​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​a​i​l​w​i​n​d​C​S​S​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​T​y​p​e​S​c​r​i​p​t​,​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​w​i​t​h​ ​S​v​e​l​t​e​K​i​t​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​,​ ​T​u​t​p​i​c​k
 	 */
 	keywords: string
 	/**
@@ -55,6 +55,10 @@ type RootTranslation = {
 		 * H​i​d​e
 		 */
 		hide: string
+		/**
+		 * B​a​c​k
+		 */
+		back: string
 		/**
 		 * O​r
 		 */
@@ -130,7 +134,7 @@ type RootTranslation = {
 	}
 	appLogo: {
 		/**
-		 * T​u​t​p​i​c​k​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
+		 * T​u​t​p​i​c​k​ ​i​s​ ​a​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​.​ ​I​t​ ​u​s​e​s​ ​a​l​l​ ​t​h​e​ ​l​a​t​e​s​t​ ​g​r​e​a​t​e​s​t​ ​t​e​c​h​n​o​l​o​g​i​e​s​ ​t​h​a​t​ ​s​e​t​u​p​ ​o​u​t​ ​o​f​ ​t​h​e​ ​b​o​x​.​ ​I​n​ ​t​h​i​s​ ​w​a​y​ ​y​o​u​ ​a​r​e​ ​s​a​v​i​n​g​ ​a​ ​w​h​o​l​e​ ​l​o​t​ ​o​f​ ​t​i​m​e​ ​a​n​d​ ​y​o​u​r​ ​m​o​n​e​y​.​ ​I​t​ ​i​s​ ​a​ ​p​e​r​f​e​c​t​ ​s​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​f​o​r​ ​y​o​u​r​ ​n​e​x​t​ ​d​r​e​a​m​ ​p​r​o​j​e​c​t​.​ ​D​o​ ​n​o​t​ ​s​p​e​n​d​ ​t​i​m​e​ ​m​o​s​t​ ​o​f​ ​y​o​u​r​ ​t​i​m​e​ ​d​o​i​n​g​ ​t​h​e​ ​s​a​m​e​ ​t​h​i​n​g​ ​o​v​e​r​ ​a​n​d​ ​o​v​e​r​ ​a​g​a​i​n​.​ ​S​p​e​n​d​ ​y​o​u​r​ ​t​i​m​e​ ​o​n​ ​t​h​e​ ​t​h​i​n​g​s​ ​t​h​a​t​ ​m​a​t​t​e​r​ ​t​h​e​ ​m​o​s​t​.
 		 */
 		hrefTitle: string
 		/**
@@ -140,15 +144,15 @@ type RootTranslation = {
 	}
 	schemaMarkup: {
 		/**
-		 * C​o​r​p​o​r​a​t​i​o​n
+		 * L​L​C
 		 */
 		type: string
 		/**
-		 * M​e​m​o​w​i​s​e​ ​I​n​c​.
+		 * s​h​a​m​s​c​o​r​n​e​r​ ​L​L​C
 		 */
 		name: string
 		/**
-		 * M​e​m​o​w​i​s​e​ ​i​s​ ​a​ ​s​o​f​t​w​a​r​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​b​u​i​l​d​s​ ​p​r​o​d​u​c​t​s​ ​t​o​ ​h​e​l​p​ ​p​e​o​p​l​e​.​ ​W​e​ ​a​r​e​ ​a​ ​s​m​a​l​l​ ​t​e​a​m​ ​o​f​ ​p​a​s​s​i​o​n​a​t​e​ ​d​e​v​e​l​o​p​e​r​s​,​ ​d​e​s​i​g​n​e​r​s​,​ ​a​n​d​ ​e​n​t​r​e​p​r​e​n​e​u​r​s​.​ ​W​e​ ​a​r​e​ ​b​a​s​e​d​ ​i​n​ ​D​h​a​k​a​,​ ​B​a​n​g​l​a​d​e​s​h​.
+		 * s​h​a​m​s​c​o​r​n​e​r​ ​L​L​C​ ​i​s​ ​a​ ​s​o​f​t​w​a​r​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​b​u​i​l​d​s​ ​p​r​o​d​u​c​t​s​ ​t​o​ ​h​e​l​p​ ​p​e​o​p​l​e​.​ ​W​e​ ​a​r​e​ ​a​ ​s​m​a​l​l​ ​t​e​a​m​ ​o​f​ ​p​a​s​s​i​o​n​a​t​e​ ​d​e​v​e​l​o​p​e​r​s​,​ ​d​e​s​i​g​n​e​r​s​,​ ​a​n​d​ ​e​n​t​r​e​p​r​e​n​e​u​r​s​.​ ​W​e​ ​a​r​e​ ​b​a​s​e​d​ ​i​n​ ​D​h​a​k​a​,​ ​B​a​n​g​l​a​d​e​s​h​.
 		 */
 		markupDescription: string
 		founder: {
@@ -194,7 +198,7 @@ type RootTranslation = {
 				 */
 				type: string
 				/**
-				 * m​e​m​o​w​i​s​e​i​n​c​@​g​m​a​i​l​.​c​o​m
+				 * s​u​p​p​o​r​t​@​s​h​a​m​s​c​o​r​n​e​r​.​c​o​m
 				 */
 				email: string
 				telephone: string
@@ -233,11 +237,11 @@ type RootTranslation = {
 	}
 	homepage: {
 		/**
-		 * A​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​f​o​r​ ​S​v​e​l​t​e​K​i​t​.
+		 * T​u​t​p​i​c​k​ ​-​ ​Y​o​u​r​ ​o​n​e​ ​a​n​d​ ​o​n​l​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​ ​f​o​r​ ​y​o​u​r​ ​n​e​x​t​ ​d​r​e​a​m​ ​p​r​o​j​e​c​t​.
 		 */
 		title: string
 		/**
-		 * T​u​t​p​i​c​k​ ​o​f​f​e​r​s​ ​c​o​m​p​e​t​i​t​i​v​e​ ​r​a​t​e​s​ ​f​o​r​ ​b​u​y​i​n​g​ ​a​n​d​ ​s​e​l​l​i​n​g​ ​d​o​l​l​a​r​s​ ​o​n​l​i​n​e​.​ ​S​e​c​u​r​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​o​l​l​a​r​ ​r​a​t​e​s​ ​e​n​s​u​r​e​ ​t​h​e​ ​b​e​s​t​ ​v​a​l​u​e​ ​f​o​r​ ​y​o​u​r​ ​m​o​n​e​y​.
+		 * T​u​t​p​i​c​k​ ​i​s​ ​a​ ​p​r​o​d​u​c​t​i​o​n​ ​r​e​a​d​y​ ​s​t​a​r​t​e​r​ ​t​e​m​p​l​a​t​e​.​ ​I​t​ ​u​s​e​s​ ​a​l​l​ ​t​h​e​ ​l​a​t​e​s​t​ ​g​r​e​a​t​e​s​t​ ​t​e​c​h​n​o​l​o​g​i​e​s​ ​t​h​a​t​ ​s​e​t​u​p​ ​o​u​t​ ​o​f​ ​t​h​e​ ​b​o​x​.​ ​I​n​ ​t​h​i​s​ ​w​a​y​ ​y​o​u​ ​a​r​e​ ​s​a​v​i​n​g​ ​a​ ​w​h​o​l​e​ ​l​o​t​ ​o​f​ ​t​i​m​e​ ​a​n​d​ ​y​o​u​r​ ​m​o​n​e​y​.​ ​I​t​ ​i​s​ ​a​ ​p​e​r​f​e​c​t​ ​s​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​f​o​r​ ​y​o​u​r​ ​n​e​x​t​ ​d​r​e​a​m​ ​p​r​o​j​e​c​t​.​ ​D​o​ ​n​o​t​ ​s​p​e​n​d​ ​t​i​m​e​ ​m​o​s​t​ ​o​f​ ​y​o​u​r​ ​t​i​m​e​ ​d​o​i​n​g​ ​t​h​e​ ​s​a​m​e​ ​t​h​i​n​g​ ​o​v​e​r​ ​a​n​d​ ​o​v​e​r​ ​a​g​a​i​n​.​ ​S​p​e​n​d​ ​y​o​u​r​ ​t​i​m​e​ ​o​n​ ​t​h​e​ ​t​h​i​n​g​s​ ​t​h​a​t​ ​m​a​t​t​e​r​ ​t​h​e​ ​m​o​s​t​.
 		 */
 		subtitle: string
 	}
@@ -271,18 +275,6 @@ type RootTranslation = {
 			 * S​e​n​d​ ​M​a​g​i​c​ ​L​i​n​k
 			 */
 			submit: string
-			/**
-			 * O​r​ ​c​o​n​t​i​n​u​e​ ​w​i​t​h
-			 */
-			continueWith: string
-			/**
-			 * D​o​n​'​t​ ​h​a​v​e​ ​a​n​ ​a​c​c​o​u​n​t​?
-			 */
-			dontHaveAccount: string
-			/**
-			 * F​o​r​g​o​t​ ​p​a​s​s​w​o​r​d​?
-			 */
-			forgotPassword: string
 			/**
 			 * R​e​m​e​m​b​e​r​ ​m​e​?
 			 */
@@ -601,15 +593,15 @@ export type TranslationFunctions = {
 	 */
 	appName: () => LocalizedString
 	/**
-	 * Tutpick - Buy and Sell Dollars at the Best Rates
+	 * Tutpick - Your one and only starter template for your next dream project.
 	 */
 	title: () => LocalizedString
 	/**
-	 * Tutpick offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
+	 * Tutpick is a production ready starter template. It uses all the latest greatest technologies that setup out of the box. In this way you are saving a whole lot of time and your money. It is a perfect starting point for your next dream project. Do not spend time most of your time doing the same thing over and over again. Spend your time on the things that matter the most.
 	 */
 	description: () => LocalizedString
 	/**
-	 * Buy dollars online, sell dollars online, best dollar exchange rates, competitive currency exchange, secure dollar transactions, online dollar marketplace, dollar exchange platform, real-time dollar rates, currency exchange services, hassle-free dollar trading, dollar exchange community, online dollar trading, dollar to local currency exchange, best place to buy dollars, best place to sell dollars, Tutpick
+	 * Tutpick, SvelteKit, TailwindCSS, TypeScript, Vite, Svelte, SvelteKit template, SvelteKit starter template, SvelteKit production ready template, SvelteKit production ready starter template, SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with Vite, SvelteKit production ready starter template with Svelte, SvelteKit production ready starter template with SvelteKit template, SvelteKit production ready starter template with SvelteKit starter template, SvelteKit production ready starter template with SvelteKit production ready template, SvelteKit production ready starter template with SvelteKit production ready starter template, SvelteKit production ready starter template with SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with SvelteKit production ready starter template with Vite, SvelteKit production ready starter template with SvelteKit production ready starter template with Svelte, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit starter template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with SvelteKit production ready starter template with Vite, SvelteKit production ready starter template with SvelteKit production ready starter template with Svelte, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit starter template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready template, SvelteKit production ready starter template with SvelteKit production ready starter template with SvelteKit production ready starter template with TailwindCSS, SvelteKit production ready starter template with SvelteKit production ready starter template with TypeScript, SvelteKit production ready starter template with SvelteKit production ready starter template, Tutpick
 	 */
 	keywords: () => LocalizedString
 	/**
@@ -637,6 +629,10 @@ export type TranslationFunctions = {
 		 * Hide
 		 */
 		hide: () => LocalizedString
+		/**
+		 * Back
+		 */
+		back: () => LocalizedString
 		/**
 		 * Or
 		 */
@@ -712,7 +708,7 @@ export type TranslationFunctions = {
 	}
 	appLogo: {
 		/**
-		 * Tutpick offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
+		 * Tutpick is a production ready starter template. It uses all the latest greatest technologies that setup out of the box. In this way you are saving a whole lot of time and your money. It is a perfect starting point for your next dream project. Do not spend time most of your time doing the same thing over and over again. Spend your time on the things that matter the most.
 		 */
 		hrefTitle: () => LocalizedString
 		/**
@@ -722,15 +718,15 @@ export type TranslationFunctions = {
 	}
 	schemaMarkup: {
 		/**
-		 * Corporation
+		 * LLC
 		 */
 		type: () => LocalizedString
 		/**
-		 * Memowise Inc.
+		 * shamscorner LLC
 		 */
 		name: () => LocalizedString
 		/**
-		 * Memowise is a software company that builds products to help people. We are a small team of passionate developers, designers, and entrepreneurs. We are based in Dhaka, Bangladesh.
+		 * shamscorner LLC is a software company that builds products to help people. We are a small team of passionate developers, designers, and entrepreneurs. We are based in Dhaka, Bangladesh.
 		 */
 		markupDescription: () => LocalizedString
 		founder: {
@@ -776,7 +772,7 @@ export type TranslationFunctions = {
 				 */
 				type: () => LocalizedString
 				/**
-				 * memowiseinc@gmail.com
+				 * support@shamscorner.com
 				 */
 				email: () => LocalizedString
 				telephone: () => LocalizedString
@@ -815,11 +811,11 @@ export type TranslationFunctions = {
 	}
 	homepage: {
 		/**
-		 * A production ready starter template for SvelteKit.
+		 * Tutpick - Your one and only starter template for your next dream project.
 		 */
 		title: () => LocalizedString
 		/**
-		 * Tutpick offers competitive rates for buying and selling dollars online. Secure transactions and real-time dollar rates ensure the best value for your money.
+		 * Tutpick is a production ready starter template. It uses all the latest greatest technologies that setup out of the box. In this way you are saving a whole lot of time and your money. It is a perfect starting point for your next dream project. Do not spend time most of your time doing the same thing over and over again. Spend your time on the things that matter the most.
 		 */
 		subtitle: () => LocalizedString
 	}
@@ -853,18 +849,6 @@ export type TranslationFunctions = {
 			 * Send Magic Link
 			 */
 			submit: () => LocalizedString
-			/**
-			 * Or continue with
-			 */
-			continueWith: () => LocalizedString
-			/**
-			 * Don't have an account?
-			 */
-			dontHaveAccount: () => LocalizedString
-			/**
-			 * Forgot password?
-			 */
-			forgotPassword: () => LocalizedString
 			/**
 			 * Remember me?
 			 */

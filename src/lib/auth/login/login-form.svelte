@@ -6,6 +6,7 @@
 	import { type Infer, superForm, type SuperValidated } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 
+	import { goto } from '$app/navigation';
 	import { PUBLIC_APP_PAGE } from '$env/static/public';
 	import { Icons } from '$lib/components/icons';
 	import * as Form from '$lib/components/ui/form';
@@ -54,11 +55,8 @@
 			}
 
 			if (result.type === 'success') {
-				formResponse = {
-					message: $LL.loginPage.form.success(),
-					type: 'success'
-				};
 				performRememberMe();
+				await goto('/auth/login/success');
 			}
 
 			isLoadingFormSubmit = false;

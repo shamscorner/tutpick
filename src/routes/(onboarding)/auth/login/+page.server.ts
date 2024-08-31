@@ -54,6 +54,8 @@ export const actions: Actions = {
 			});
 		}
 
+		console.log('Login link:', magicLink);
+
 		return { form };
 	}
 };
