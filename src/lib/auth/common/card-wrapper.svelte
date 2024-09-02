@@ -5,8 +5,13 @@
 	import AuthHeader from './auth-header.svelte';
 	import SocialOptions from './social-options.svelte';
 
-	export let headerLabel: string;
-	export let showSocial = false;
+	interface CardWrapperProps {
+		headerLabel: string;
+		showSocial?: boolean;
+		children?: any;
+	}
+
+	let { headerLabel, showSocial, children }: CardWrapperProps = $props();
 </script>
 
 <Card class="w-[400px] shadow-md">
@@ -18,6 +23,6 @@
 			<SocialOptions />
 			<div class="mt-4 text-center text-sm font-semibold">{$LL.common.or()}</div>
 		{/if}
-		<slot />
+		{@render children()}
 	</CardContent>
 </Card>

@@ -13,14 +13,18 @@
 	import { LL } from '$lib/i18n/i18n-svelte';
 	// import { browser } from '$app/environment';
 
-	export let data: SuperValidated<Infer<FormSchemaChangeEmail>>;
-	export let user: User;
+	interface ChangeUserEmailFormProps {
+		data: SuperValidated<Infer<FormSchemaChangeEmail>>;
+		user: User;
+	}
 
-	let formStatus: { message: string; type: FormStatus } = {
+	let { data, user }: ChangeUserEmailFormProps = $props();
+
+	let formStatus = $state<{ message: string; type: FormStatus }>({
 		message: '',
 		type: 'error'
-	};
-	let isLoadingFormSubmit = false;
+	});
+	let isLoadingFormSubmit = $state<boolean>(false);
 
 	const form = superForm(data, {
 		dataType: 'json',
@@ -57,11 +61,11 @@
 
 	const { form: formData, enhance } = form;
 
-	$: {
+	$effect(() => {
 		formData.update(() => ({
 			email: user.email || ''
 		}));
-	}
+	});
 </script>
 
 <form method="POST" action="/my-profile?/updateEmail" use:enhance class="space-y-4">

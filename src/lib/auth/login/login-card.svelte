@@ -8,7 +8,11 @@
 	import LoginForm from './login-form.svelte';
 	import { type FormSchema } from './schema';
 
-	export let data: SuperValidated<Infer<FormSchema>>;
+	interface LoginCardProps {
+		data: SuperValidated<Infer<FormSchema>>;
+	}
+
+	let { data }: LoginCardProps = $props();
 </script>
 
 <CardWrapper headerLabel={$LL.loginPage.title()} showSocial>

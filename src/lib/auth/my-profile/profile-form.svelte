@@ -14,14 +14,18 @@
 	import { LL } from '$lib/i18n/i18n-svelte';
 	// import { browser } from '$app/environment';
 
-	export let data: SuperValidated<Infer<FormSchema>>;
-	export let user: User;
+	interface ProfileFormProps {
+		data: SuperValidated<Infer<FormSchema>>;
+		user: User;
+	}
 
-	let formStatus: { message: string; type: FormStatus } = {
+	let { data, user }: ProfileFormProps = $props();
+
+	let formStatus = $state<{ message: string; type: FormStatus }>({
 		message: '',
 		type: 'error'
-	};
-	let isLoadingFormSubmit = false;
+	});
+	let isLoadingFormSubmit = $state<boolean>(false);
 
 	const form = superForm(data, {
 		dataType: 'json',
@@ -58,12 +62,12 @@
 
 	const { form: formData, enhance } = form;
 
-	$: {
+	$effect(() => {
 		formData.update(() => ({
 			name: user.name,
 			isTwoFactorEnabled: user.isTwoFactorEnabled || false
 		}));
-	}
+	});
 </script>
 
 <form method="POST" action="/my-profile?/updateProfile" use:enhance class="space-y-4">

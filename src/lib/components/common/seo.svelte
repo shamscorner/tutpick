@@ -4,9 +4,13 @@
 	import { PUBLIC_APP_PAGE } from '$env/static/public';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
-	export let title: string;
-	export let description: string;
-	export let keywords: string;
+	interface SeoProps {
+		title: string;
+		description: string;
+		keywords: string;
+	}
+
+	let { title, description, keywords }: SeoProps = $props();
 </script>
 
 <Seo

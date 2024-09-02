@@ -18,21 +18,24 @@
 	import { type FormSchema, formSchema } from './schema';
 	import { deleteLastLoginEmail, getLastLoginEmail, saveLastLoginEmail } from './utils';
 
-	export let data: SuperValidated<Infer<FormSchema>>;
+	interface LoginFormProps {
+		data: SuperValidated<Infer<FormSchema>>;
+	}
 
-	let isLoadingFormSubmit = false;
-	let formResponse: { message: string; type: FormStatus } = {
+	let { data }: LoginFormProps = $props();
+
+	let isLoadingFormSubmit = $state<boolean>(false);
+	let formResponse = $state<{ message: string; type: FormStatus }>({
 		message: '',
 		type: 'error'
-	};
-	let rememberEmail = false;
-
-	let analytics: AnalyticsDto = {
+	});
+	let rememberEmail = $state<boolean>(false);
+	let analytics = $state<AnalyticsDto>({
 		browserHash: '',
 		landingPage: PUBLIC_APP_PAGE,
 		isIncognitoMode: false,
 		referralSiteUrl: undefined
-	};
+	});
 
 	const form = superForm(data, {
 		validators: zodClient(formSchema),
@@ -65,7 +68,7 @@
 
 	const { form: formData, enhance } = form;
 
-	$: {
+	$effect(() => {
 		formData.update((d) => ({
 			...d,
 			browserHash: analytics.browserHash,
@@ -73,16 +76,16 @@
 			referralSiteUrl: analytics.referralSiteUrl || '',
 			isIncognitoMode: analytics.isIncognitoMode
 		}));
-	}
 
-	onMount(async () => {
 		const lastLoginEmail = getLastLoginEmail();
 
 		if (lastLoginEmail) {
 			$formData.email = lastLoginEmail;
 			rememberEmail = true;
 		}
+	});
 
+	onMount(async () => {
 		if (navigator) {
 			analytics = await getSiteAnalytics();
 		}
