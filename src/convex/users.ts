@@ -1,4 +1,4 @@
-import { v } from 'convex/values';
+import { ConvexError, v } from 'convex/values';
 import { generateIdFromEntropySize } from 'lucia';
 
 import { Id } from './_generated/dataModel';
@@ -43,7 +43,7 @@ export const sendEmailLoginLink = mutation({
 		});
 
 		if (!newTokenId) {
-			throw new Error('Failed to create token');
+			throw new ConvexError('Failed to create token');
 		}
 
 		const magicLink = getMagicLink(newTokenId);

@@ -52,9 +52,6 @@ export class ConvexAdapter implements Adapter {
 	}
 
 	async setSession(session: DatabaseSession): Promise<void> {
-		console.log('session from setSession', session);
-		console.log('session get time', session.expiresAt.getTime());
-
 		await this.db.insert('sessions', {
 			id: session.id,
 			user_id: session.userId,
