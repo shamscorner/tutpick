@@ -12,12 +12,12 @@ export async function GET(event: RequestEvent) {
 	console.log('Token ID:', tokenId);
 
 	if (!token || !email || !tokenId) {
-		return new Response(null, {
+		return new Response('Login link is invalid', {
 			status: 400
 		});
 	}
 
-	// TODO: validate token
+	// TODO: validate token with expiry
 	// TODO: after successful validation, delete token
 
 	return await passwordLessAuthHandler(event, {
