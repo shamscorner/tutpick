@@ -1,5 +1,6 @@
 <script lang="ts">
-	import CircleCheckIcon from 'lucide-svelte/icons/circle-check';
+	// import CircleCheckIcon from 'lucide-svelte/icons/circle-check';
+	import CheckIcon from 'lucide-svelte/icons/circle-check-big';
 
 	import CardWrapper from '$lib/auth/common/card-wrapper.svelte';
 	import Seo from '$lib/components/common/seo.svelte';
@@ -13,9 +14,9 @@
 	keywords={$LL.loginPage.keywords()}
 />
 
-<CardWrapper headerLabel="" showSocial={false}>
+<CardWrapper showSocial={false}>
 	<div class="mt-5">
-		<CircleCheckIcon class="mx-auto h-16 w-16 animate-bounce text-green-500" />
+		<CheckIcon class="mx-auto h-16 w-16 animate-bounce text-green-500" />
 
 		<p class="mt-5 text-center">{$LL.loginPage.form.success()}</p>
 

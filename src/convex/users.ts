@@ -1,20 +1,29 @@
 import { ConvexError, v } from 'convex/values';
-import { generateIdFromEntropySize } from 'lucia';
+import { Cookie, generateIdFromEntropySize } from 'lucia';
 
 import { Id } from './_generated/dataModel';
 import { mutation } from './_generated/server';
-import { mutationWithAuth, queryWithAuth } from './auth/withAuth';
+import { mutationWithAuth } from './auth/withAuth';
 import { validateEmail } from './utils';
 
-export const getSession = queryWithAuth({
+export const validateSession = mutationWithAuth({
 	args: {},
 	handler: async (ctx) => {
-		return JSON.stringify({
-			sessionUser: ctx.userSessionContext,
-			cookie: ctx.userSessionContext?.session?.fresh
-				? ctx.auth.createSessionCookie(ctx.userSessionContext.session.id)
-				: ctx.auth.createBlankSessionCookie()
-		});
+		const { session, user } = await ctx.auth.validateSession(
+			ctx.userSessionContext?.session?.id || ''
+		);
+
+		let sessionCookie: Cookie | null = null;
+
+		if (session && session.fresh) {
+			sessionCookie = ctx.auth.createSessionCookie(session.id);
+		}
+
+		if (!session) {
+			sessionCookie = ctx.auth.createBlankSessionCookie();
+		}
+
+		return JSON.stringify({ session, user, cookie: sessionCookie });
 	}
 });
 
@@ -81,12 +90,12 @@ export const performPasswordLessLogin = mutationWithAuth({
 	handler: async (ctx, args) => {
 		validateEmail(args.email);
 
-		const userId = generateIdFromEntropySize(10);
-
 		const existingUser = await ctx.db
 			.query('users')
 			.withIndex('byEmail', (q) => q.eq('email', args.email))
 			.unique();
+
+		const userId = existingUser?.id || generateIdFromEntropySize(10);
 
 		if (!existingUser) {
 			await ctx.db.insert('users', {
@@ -150,6 +159,6 @@ export const validateLoginToken = mutation({
 			throw new ConvexError('Login link has expired!');
 		}
 
-		// await ctx.db.delete(tokenId); TODO: uncomment this line
+		await ctx.db.delete(tokenId);
 	}
 });

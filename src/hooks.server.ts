@@ -24,5 +24,4 @@ async function i18n({ event, resolve }) {
 	});
 }
 
-// TODO: add protect routes middleware here
-export const handle = sequence(urlRewrite, i18n, initLuciaAuth) satisfies Handle;
+export const handle = sequence(urlRewrite, i18n, initLuciaAuth, protectRoutes) satisfies Handle;

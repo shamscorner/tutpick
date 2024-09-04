@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import {
 		type FpType,
 		getFromLocalStorageWithExpiry,
@@ -19,12 +18,17 @@
 
 	import '../app.postcss';
 
-	export let data: LayoutData;
+	interface LayoutProps {
+		data: LayoutData;
+		children: any;
+	}
+
+	const { data, children }: LayoutProps = $props();
 
 	setLocale(data.locale);
 	setupConvex(PUBLIC_CONVEX_URL);
 
-	onMount(() => {
+	$effect(() => {
 		saveReferralCode();
 		saveFirstPageVisit();
 	});
@@ -61,4 +65,4 @@
 
 <Analytics gtagMeasurementId={PUBLIC_GOOGLE_TAG_MEASUREMENT_ID} />
 
-<slot />
+{@render children()}

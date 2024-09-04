@@ -6,7 +6,7 @@
 	import SocialOptions from './social-options.svelte';
 
 	interface CardWrapperProps {
-		headerLabel: string;
+		headerLabel?: string;
 		showSocial?: boolean;
 		children?: any;
 	}
@@ -16,7 +16,9 @@
 
 <Card class="w-[400px] shadow-md">
 	<CardHeader>
-		<AuthHeader label={headerLabel}></AuthHeader>
+		{#if headerLabel}
+			<AuthHeader label={headerLabel}></AuthHeader>
+		{/if}
 	</CardHeader>
 	<CardContent>
 		{#if showSocial}

@@ -30,8 +30,6 @@ export async function protectRoutes({ event, resolve }) {
 export async function initLuciaAuth({ event, resolve }) {
 	const sessionId = event.cookies.get('auth_session');
 
-	console.log('sessionId', sessionId);
-
 	if (!sessionId) {
 		event.locals.user = null;
 		event.locals.session = null;
@@ -39,24 +37,27 @@ export async function initLuciaAuth({ event, resolve }) {
 	}
 
 	try {
-		const responseJson = await client.query(api.users.getSession, { sessionId });
-		console.log('responseJson', responseJson); // TODO: error check convex log
+		const responseJson = await client.mutation(api.users.validateSession, { sessionId });
 
-		const { sessionUser, cookie } = JSON.parse(responseJson) as {
-			sessionUser: { session: Session; user: User };
-			cookie: Cookie;
+		const { session, user, cookie } = JSON.parse(responseJson) as {
+			session: Session;
+			user: User;
+			cookie: Cookie | undefined;
 		};
 
-		const { session, user } = sessionUser;
-
-		if (!user || !session || !cookie) {
-			throw new Error('Invalid session');
+		if (session && session.fresh && cookie) {
+			event.cookies.set(cookie.name, cookie.value, {
+				path: '.',
+				...cookie.attributes
+			});
 		}
 
-		event.cookies.set(cookie.name, cookie.value, {
-			path: '.',
-			...cookie.attributes
-		});
+		if (!session && cookie) {
+			event.cookies.set(cookie.name, cookie.value, {
+				path: '.',
+				...cookie.attributes
+			});
+		}
 
 		event.locals.user = user;
 		event.locals.session = session;
