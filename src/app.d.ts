@@ -5,6 +5,8 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			locale: import('$lib/i18n/i18n-types.ts').Locales;
+			user: import('lucia').User | null;
+			session: import('lucia').Session | null;
 		}
 		// interface PageData {}
 		// interface Platform {}

@@ -28,6 +28,7 @@ export const actions: Actions = {
 
 		const { email } = form.data;
 
+		// TODO: handle errors
 		const { magicLink } = await client.mutation(api.users.sendEmailLoginLink, {
 			email
 		});

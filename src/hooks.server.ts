@@ -3,7 +3,7 @@ import { redirect } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors';
 
-// import { protectRoutes } from '$lib/auth/middlewares';
+import { initLuciaAuth, protectRoutes } from '$lib/auth/middlewares';
 import { detectLocale } from '$lib/i18n/i18n-util.js';
 
 async function urlRewrite({ event, resolve }) {
@@ -24,4 +24,5 @@ async function i18n({ event, resolve }) {
 	});
 }
 
-export const handle = sequence(urlRewrite, i18n) satisfies Handle;
+// TODO: add protect routes middleware here
+export const handle = sequence(urlRewrite, i18n, initLuciaAuth) satisfies Handle;

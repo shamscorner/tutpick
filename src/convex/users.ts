@@ -4,16 +4,34 @@ import { generateIdFromEntropySize } from 'lucia';
 import { Id } from './_generated/dataModel';
 import { mutation } from './_generated/server';
 import { mutationWithAuth, queryWithAuth } from './auth/withAuth';
+import { validateEmail } from './utils';
 
 export const getSession = queryWithAuth({
 	args: {},
 	handler: async (ctx) => {
-		return {
-			session: JSON.stringify(ctx.userSessionContext),
+		return JSON.stringify({
+			sessionUser: ctx.userSessionContext,
 			cookie: ctx.userSessionContext?.session?.fresh
-				? ctx.auth.createSessionCookie(ctx.userSessionContext.session.id).serialize()
-				: undefined
-		};
+				? ctx.auth.createSessionCookie(ctx.userSessionContext.session.id)
+				: ctx.auth.createBlankSessionCookie()
+		});
+	}
+});
+
+export const invalidateSession = mutationWithAuth({
+	args: {},
+	handler: async (ctx) => {
+		const existingSession = ctx.userSessionContext?.session;
+
+		const blankCookieResponse = JSON.stringify({ cookie: ctx.auth.createBlankSessionCookie() });
+
+		if (!existingSession) {
+			return blankCookieResponse;
+		}
+
+		await ctx.auth.invalidateSession(existingSession.id);
+
+		return blankCookieResponse;
 	}
 });
 
@@ -43,7 +61,7 @@ export const sendEmailLoginLink = mutation({
 		});
 
 		if (!newTokenId) {
-			throw new ConvexError('Failed to create token');
+			throw new ConvexError('Failed to create token!');
 		}
 
 		const magicLink = getMagicLink(newTokenId);
@@ -61,6 +79,8 @@ export const performPasswordLessLogin = mutationWithAuth({
 		avatar: v.optional(v.string())
 	},
 	handler: async (ctx, args) => {
+		validateEmail(args.email);
+
 		const userId = generateIdFromEntropySize(10);
 
 		const existingUser = await ctx.db
@@ -84,7 +104,7 @@ export const performPasswordLessLogin = mutationWithAuth({
 			avatar: args.avatar
 		});
 
-		const cookie = ctx.auth.createSessionCookie(session.id).serialize();
+		const cookie = ctx.auth.createSessionCookie(session.id);
 
 		const existingAccount = await ctx.db
 			.query('accounts')
@@ -98,6 +118,38 @@ export const performPasswordLessLogin = mutationWithAuth({
 			});
 		}
 
-		return { session, cookie };
+		return JSON.stringify({ session, cookie });
+	}
+});
+
+export const validateLoginToken = mutation({
+	args: {
+		token: v.string(),
+		email: v.string(),
+		id: v.string()
+	},
+	handler: async (ctx, args) => {
+		validateEmail(args.email);
+
+		const tokenRecord = await ctx.db
+			.query('tokens')
+			.withIndex('byEmail', (q) => q.eq('email', args.email))
+			.unique();
+
+		if (!tokenRecord) {
+			throw new ConvexError('Invalid login link!');
+		}
+
+		const { token, _id: tokenId, email: tokenEmail } = tokenRecord;
+
+		if (token !== args.token || tokenId !== args.id || tokenEmail !== args.email) {
+			throw new ConvexError('Invalid login link!');
+		}
+
+		if (tokenRecord.expires_at < Date.now()) {
+			throw new ConvexError('Login link has expired!');
+		}
+
+		// await ctx.db.delete(tokenId); TODO: uncomment this line
 	}
 });
