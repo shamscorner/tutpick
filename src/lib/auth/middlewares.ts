@@ -42,11 +42,12 @@ export async function initLuciaAuth({ event, resolve }) {
 		const responseJson = await client.query(api.users.getSession, { sessionId });
 		console.log('responseJson', responseJson); // TODO: error check convex log
 
-		const { user, session, cookie } = JSON.parse(responseJson) as {
-			session: Session;
-			user: User;
+		const { sessionUser, cookie } = JSON.parse(responseJson) as {
+			sessionUser: { session: Session; user: User };
 			cookie: Cookie;
 		};
+
+		const { session, user } = sessionUser;
 
 		if (!user || !session || !cookie) {
 			throw new Error('Invalid session');
