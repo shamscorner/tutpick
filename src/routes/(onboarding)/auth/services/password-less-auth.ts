@@ -22,7 +22,7 @@ export async function passwordLessAuthHandler(
 	let loginResponse = '';
 
 	try {
-		loginResponse = await client.mutation(api.users.performPasswordLessLogin, {
+		loginResponse = await client.mutation(api.core.users.performPasswordLessLogin, {
 			email,
 			provider,
 			name,

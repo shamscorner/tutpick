@@ -1,10 +1,11 @@
 import { ConvexError, v } from 'convex/values';
 import { Cookie, generateIdFromEntropySize } from 'lucia';
 
-import { Id } from './_generated/dataModel';
-import { mutation } from './_generated/server';
+import { Id } from '../_generated/dataModel';
+import { mutation } from '../_generated/server';
+import { validateEmail } from '../utils';
+
 import { mutationWithAuth } from './auth/withAuth';
-import { validateEmail } from './utils';
 
 export const validateSession = mutationWithAuth({
 	args: {},

@@ -7,8 +7,8 @@ import {
 	internalQuery,
 	mutation,
 	query
-} from '../_generated/server';
-import { entDefinitions } from '../schema';
+} from '../../_generated/server';
+import { entDefinitions } from '../../schema';
 
 import { type Auth, getAuth } from './lucia';
 import { MutationWithAuth, QueryWithAuth, UserSessionContext } from './types';

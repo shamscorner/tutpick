@@ -2,8 +2,8 @@ import { ObjectType, PropertyValidators } from 'convex/values';
 import { entsTableFactory } from 'convex-ents';
 import { Session, User } from 'lucia';
 
-import { MutationCtx, QueryCtx } from '../../_generated/server';
-import { entDefinitions } from '../../schema';
+import { MutationCtx, QueryCtx } from '../../../_generated/server';
+import { entDefinitions } from '../../../schema';
 import { Auth } from '../lucia';
 
 export type UserSessionContext =

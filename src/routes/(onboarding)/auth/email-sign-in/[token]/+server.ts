@@ -17,7 +17,7 @@ export async function GET(event: RequestEvent) {
 	}
 
 	try {
-		await client.mutation(api.users.validateLoginToken, {
+		await client.mutation(api.core.users.validateLoginToken, {
 			email,
 			token,
 			id: tokenId

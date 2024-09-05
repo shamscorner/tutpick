@@ -37,7 +37,7 @@ export async function initLuciaAuth({ event, resolve }) {
 	}
 
 	try {
-		const responseJson = await client.mutation(api.users.validateSession, { sessionId });
+		const responseJson = await client.mutation(api.core.users.validateSession, { sessionId });
 
 		const { session, user, cookie } = JSON.parse(responseJson) as {
 			session: Session;

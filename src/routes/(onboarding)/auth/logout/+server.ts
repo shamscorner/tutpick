@@ -7,7 +7,7 @@ import { client } from '$lib/convex';
 
 export async function GET(event: RequestEvent): Promise<Response> {
 	if (event.locals.session) {
-		const cookieResponse = await client.mutation(api.users.invalidateSession, {
+		const cookieResponse = await client.mutation(api.core.users.invalidateSession, {
 			sessionId: event.locals.session.id
 		});
 

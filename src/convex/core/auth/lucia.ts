@@ -1,6 +1,6 @@
 import { type Adapter, type DatabaseSession, type DatabaseUser, Lucia } from 'lucia';
 
-import type { DatabaseReader, DatabaseWriter } from '../_generated/server';
+import type { DatabaseReader, DatabaseWriter } from '../../_generated/server';
 
 declare module 'lucia' {
 	interface Register {
