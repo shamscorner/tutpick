@@ -1,15 +1,12 @@
 import { type RequestEvent } from '@sveltejs/kit';
 import type { Cookie } from 'lucia';
 
-import { api } from '$convex/_generated/api';
 import { loginRoute } from '$lib/auth/routes';
-import { client } from '$lib/convex';
+import { inValidateSession } from '$lib/auth/services';
 
 export async function GET(event: RequestEvent): Promise<Response> {
 	if (event.locals.session) {
-		const cookieResponse = await client.mutation(api.core.users.invalidateSession, {
-			sessionId: event.locals.session.id
-		});
+		const cookieResponse = await inValidateSession(event.locals.session.id);
 
 		const sessionCookie = JSON.parse(cookieResponse) as Cookie;
 

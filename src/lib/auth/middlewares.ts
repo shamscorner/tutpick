@@ -1,10 +1,8 @@
 import { redirect } from '@sveltejs/kit';
 import type { Cookie, Session, User } from 'lucia';
 
-import { api } from '$convex/_generated/api';
-import { client } from '$lib/convex';
-
 import { appHomeRoute, authRouteIds, isDevRoutes, isProtectedRoutes, loginRoute } from './routes';
+import { validateSession } from './services';
 
 export async function protectRoutes({ event, resolve }) {
 	const currentRouteId = event.route.id;
@@ -37,7 +35,7 @@ export async function initLuciaAuth({ event, resolve }) {
 	}
 
 	try {
-		const responseJson = await client.mutation(api.core.users.validateSession, { sessionId });
+		const responseJson = await validateSession(sessionId);
 
 		const { session, user, cookie } = JSON.parse(responseJson) as {
 			session: Session;

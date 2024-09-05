@@ -3,9 +3,8 @@ import { fail } from '@sveltejs/kit';
 import { zod } from 'sveltekit-superforms/adapters';
 import { superValidate } from 'sveltekit-superforms/server';
 
-import { api } from '$convex/_generated/api';
 import { formSchema } from '$lib/auth/login/schema';
-import { client } from '$lib/convex';
+import { sendEmailLoginLink } from '$lib/auth/services';
 import { resend } from '$routes/(email)/services/email.service';
 
 import type { Actions, PageServerLoad } from './$types';
@@ -29,9 +28,7 @@ export const actions: Actions = {
 		const { email } = form.data;
 
 		// TODO: handle errors
-		const { magicLink } = await client.mutation(api.core.users.sendEmailLoginLink, {
-			email
-		});
+		const { magicLink } = await sendEmailLoginLink(email);
 
 		if (!magicLink) {
 			return fail(401, {

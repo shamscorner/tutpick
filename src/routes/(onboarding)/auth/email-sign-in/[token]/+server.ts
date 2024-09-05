@@ -1,7 +1,6 @@
 import type { RequestEvent } from '@sveltejs/kit';
 
-import { api } from '$convex/_generated/api';
-import { client } from '$lib/convex';
+import { validateLoginToken } from '$lib/auth/services';
 
 import { passwordLessAuthHandler } from '../../services/password-less-auth';
 
@@ -17,11 +16,7 @@ export async function GET(event: RequestEvent) {
 	}
 
 	try {
-		await client.mutation(api.core.users.validateLoginToken, {
-			email,
-			token,
-			id: tokenId
-		});
+		await validateLoginToken(email, token, tokenId);
 	} catch (e: any) {
 		return new Response(e.data, {
 			status: 400

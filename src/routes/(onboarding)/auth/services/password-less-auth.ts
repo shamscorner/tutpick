@@ -1,9 +1,8 @@
 import { type RequestEvent } from '@sveltejs/kit';
 import type { Cookie, Session } from 'lucia';
 
-import { api } from '$convex/_generated/api';
 import { appHomeRoute } from '$lib/auth/routes';
-import { client } from '$lib/convex';
+import { performPasswordLessLogin } from '$lib/auth/services';
 
 export type PasswordLessUserData = {
 	email: string;
@@ -22,13 +21,12 @@ export async function passwordLessAuthHandler(
 	let loginResponse = '';
 
 	try {
-		loginResponse = await client.mutation(api.core.users.performPasswordLessLogin, {
+		loginResponse = await performPasswordLessLogin({
 			email,
 			provider,
 			name,
 			username,
-			avatar,
-			sessionId: null
+			avatar
 		});
 	} catch (e: any) {
 		return new Response(e.data, {
