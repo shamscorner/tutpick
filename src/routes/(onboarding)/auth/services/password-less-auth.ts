@@ -1,4 +1,4 @@
-import { type RequestEvent } from '@sveltejs/kit';
+import { error, type RequestEvent } from '@sveltejs/kit';
 import type { Cookie, Session } from 'lucia';
 
 import { appHomeRoute } from '$lib/auth/routes';
@@ -28,9 +28,7 @@ export async function passwordLessAuthHandler(
 	});
 
 	if (loginError || !loginResponse) {
-		return new Response(parseErrorMessage(loginError), {
-			status: 400
-		});
+		error(400, parseErrorMessage(loginError));
 	}
 
 	const { cookie } = JSON.parse(loginResponse) as { session: Session; cookie: Cookie };

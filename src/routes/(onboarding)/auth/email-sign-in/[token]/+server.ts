@@ -1,6 +1,7 @@
-import type { RequestEvent } from '@sveltejs/kit';
+import { error, type RequestEvent } from '@sveltejs/kit';
 
 import { validateLoginToken } from '$lib/auth/services';
+import { parseErrorMessage } from '$lib/services/error';
 
 import { passwordLessAuthHandler } from '../../services/password-less-auth';
 
@@ -10,17 +11,13 @@ export async function GET(event: RequestEvent) {
 	const tokenId = event.url.searchParams.get('id');
 
 	if (!token || !email || !tokenId) {
-		return new Response('Invalid login link!', {
-			status: 400
-		});
+		error(400, 'Invalid login link!');
 	}
 
-	const { error } = await validateLoginToken(email, token, tokenId);
+	const { error: tokenError } = await validateLoginToken(email, token, tokenId);
 
-	if (error) {
-		return new Response('Validation failed! Try again...', {
-			status: 400
-		});
+	if (tokenError) {
+		error(400, parseErrorMessage(tokenError));
 	}
 
 	return await passwordLessAuthHandler(event, {
