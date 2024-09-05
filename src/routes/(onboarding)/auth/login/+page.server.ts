@@ -27,24 +27,25 @@ export const actions: Actions = {
 
 		const { email } = form.data;
 
-		// TODO: handle errors
-		const { magicLink } = await sendEmailLoginLink(email);
+		const { data: linkData, error: linkError } = await sendEmailLoginLink(email);
 
-		if (!magicLink) {
+		if (linkError || !linkData) {
 			return fail(401, {
 				form,
 				error: 'Failed to create login link'
 			});
 		}
 
-		const { error } = await resend.emails.send({
+		const { magicLink } = linkData;
+
+		const { error: mailError } = await resend.emails.send({
 			from: process.env.RESEND_API_FROM_EMAIL || 'onboarding@resend.dev',
 			to: email,
 			subject: 'No reply - Login link!',
 			html: `<a href="${magicLink}">${magicLink}</a>`
 		});
 
-		if (error) {
+		if (mailError) {
 			return fail(401, {
 				form,
 				error: 'Failed to send email'

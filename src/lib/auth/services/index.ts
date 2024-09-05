@@ -1,5 +1,7 @@
 import { api } from '$convex/_generated/api';
 import { client } from '$lib/convex';
+import { parseErrorFromResponse } from '$lib/services';
+import type { apiError } from '$lib/types';
 
 export async function validateSession(sessionId: string) {
 	return await client.mutation(api.core.users.validateSession, { sessionId });
@@ -14,9 +16,14 @@ export async function validateLoginToken(email: string, token: string, tokenId: 
 }
 
 export async function sendEmailLoginLink(email: string) {
-	return await client.mutation(api.core.users.sendEmailLoginLink, {
-		email
-	});
+	try {
+		const data = await client.mutation(api.core.users.sendEmailLoginLink, {
+			email
+		});
+		return { data };
+	} catch (e) {
+		return { data: null, error: parseErrorFromResponse(e) };
+	}
 }
 
 export async function inValidateSession(sessionId: string) {
