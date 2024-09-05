@@ -3,6 +3,7 @@ import type { Cookie, Session } from 'lucia';
 
 import { appHomeRoute } from '$lib/auth/routes';
 import { performPasswordLessLogin } from '$lib/auth/services';
+import { parseErrorMessage } from '$lib/services/error';
 
 export type PasswordLessUserData = {
 	email: string;
@@ -18,18 +19,16 @@ export async function passwordLessAuthHandler(
 ) {
 	const { email, name, username, avatar } = userData;
 
-	let loginResponse = '';
+	const { data: loginResponse, error: loginError } = await performPasswordLessLogin({
+		email,
+		provider,
+		name,
+		username,
+		avatar
+	});
 
-	try {
-		loginResponse = await performPasswordLessLogin({
-			email,
-			provider,
-			name,
-			username,
-			avatar
-		});
-	} catch (e: any) {
-		return new Response(e.data, {
+	if (loginError || !loginResponse) {
+		return new Response(parseErrorMessage(loginError), {
 			status: 400
 		});
 	}

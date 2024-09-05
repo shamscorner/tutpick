@@ -3,6 +3,7 @@ import { Cookie, generateIdFromEntropySize } from 'lucia';
 
 import { Id } from '../_generated/dataModel';
 import { mutation } from '../_generated/server';
+import { ConvexErrorType } from '../types';
 import { validateEmail } from '../utils';
 
 import { mutationWithAuth } from './auth/withAuth';
@@ -71,7 +72,11 @@ export const sendEmailLoginLink = mutation({
 		});
 
 		if (!newTokenId) {
-			throw new ConvexError('Failed to create token!');
+			throw new ConvexError<ConvexErrorType>({
+				message: 'Failed to create token!',
+				code: 500,
+				severity: 'high'
+			});
 		}
 
 		const magicLink = getMagicLink(newTokenId);
@@ -147,17 +152,29 @@ export const validateLoginToken = mutation({
 			.unique();
 
 		if (!tokenRecord) {
-			throw new ConvexError('Invalid login link!');
+			throw new ConvexError<ConvexErrorType>({
+				message: 'Invalid login link!',
+				code: 400,
+				severity: 'high'
+			});
 		}
 
 		const { token, _id: tokenId, email: tokenEmail } = tokenRecord;
 
 		if (token !== args.token || tokenId !== args.id || tokenEmail !== args.email) {
-			throw new ConvexError('Invalid login link!');
+			throw new ConvexError<ConvexErrorType>({
+				message: 'Invalid login link!',
+				code: 400,
+				severity: 'high'
+			});
 		}
 
 		if (tokenRecord.expires_at < Date.now()) {
-			throw new ConvexError('Login link has expired!');
+			throw new ConvexError<ConvexErrorType>({
+				message: 'Login link has expired!',
+				code: 400,
+				severity: 'high'
+			});
 		}
 
 		await ctx.db.delete(tokenId);

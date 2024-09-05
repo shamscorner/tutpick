@@ -35,9 +35,13 @@ export async function initLuciaAuth({ event, resolve }) {
 	}
 
 	try {
-		const responseJson = await validateSession(sessionId);
+		const { data: sessionResponse, error: sessionError } = await validateSession(sessionId);
 
-		const { session, user, cookie } = JSON.parse(responseJson) as {
+		if (sessionError || !sessionResponse) {
+			throw new Error('Session validation failed');
+		}
+
+		const { session, user, cookie } = JSON.parse(sessionResponse) as {
 			session: Session;
 			user: User;
 			cookie: Cookie | undefined;

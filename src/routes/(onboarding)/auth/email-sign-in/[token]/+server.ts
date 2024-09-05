@@ -15,10 +15,10 @@ export async function GET(event: RequestEvent) {
 		});
 	}
 
-	try {
-		await validateLoginToken(email, token, tokenId);
-	} catch (e: any) {
-		return new Response(e.data, {
+	const { data, error } = await validateLoginToken(email, token, tokenId);
+
+	if (error || !data) {
+		return new Response('Validation failed! Try again...', {
 			status: 400
 		});
 	}

@@ -6,14 +6,16 @@ import { inValidateSession } from '$lib/auth/services';
 
 export async function GET(event: RequestEvent): Promise<Response> {
 	if (event.locals.session) {
-		const cookieResponse = await inValidateSession(event.locals.session.id);
+		const { data } = await inValidateSession(event.locals.session.id);
 
-		const sessionCookie = JSON.parse(cookieResponse) as Cookie;
+		if (data) {
+			const sessionCookie = JSON.parse(data) as Cookie;
 
-		event.cookies.set(sessionCookie.name, sessionCookie.value, {
-			path: '.',
-			...sessionCookie.attributes
-		});
+			event.cookies.set(sessionCookie.name, sessionCookie.value, {
+				path: '.',
+				...sessionCookie.attributes
+			});
+		}
 	}
 
 	return new Response(null, {

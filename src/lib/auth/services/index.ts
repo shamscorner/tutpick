@@ -1,18 +1,27 @@
 import { api } from '$convex/_generated/api';
 import { client } from '$lib/convex';
-import { parseErrorFromResponse } from '$lib/services';
-import type { apiError } from '$lib/types';
+import { parseErrorFromResponse } from '$lib/services/error';
 
 export async function validateSession(sessionId: string) {
-	return await client.mutation(api.core.users.validateSession, { sessionId });
+	try {
+		const data = await client.mutation(api.core.users.validateSession, { sessionId });
+		return { data };
+	} catch (e) {
+		return { data: null, error: parseErrorFromResponse(e) };
+	}
 }
 
 export async function validateLoginToken(email: string, token: string, tokenId: string) {
-	return await client.mutation(api.core.users.validateLoginToken, {
-		email,
-		token,
-		id: tokenId
-	});
+	try {
+		const data = await client.mutation(api.core.users.validateLoginToken, {
+			email,
+			token,
+			id: tokenId
+		});
+		return { data };
+	} catch (e) {
+		return { data: null, error: parseErrorFromResponse(e) };
+	}
 }
 
 export async function sendEmailLoginLink(email: string) {
@@ -27,9 +36,14 @@ export async function sendEmailLoginLink(email: string) {
 }
 
 export async function inValidateSession(sessionId: string) {
-	return await client.mutation(api.core.users.invalidateSession, {
-		sessionId
-	});
+	try {
+		const data = await client.mutation(api.core.users.invalidateSession, {
+			sessionId
+		});
+		return { data };
+	} catch (e) {
+		return { data: null, error: parseErrorFromResponse(e) };
+	}
 }
 
 export async function performPasswordLessLogin({
@@ -45,12 +59,17 @@ export async function performPasswordLessLogin({
 	username?: string;
 	avatar?: string;
 }) {
-	return await client.mutation(api.core.users.performPasswordLessLogin, {
-		email,
-		provider,
-		name,
-		username,
-		avatar,
-		sessionId: null
-	});
+	try {
+		const data = await client.mutation(api.core.users.performPasswordLessLogin, {
+			email,
+			provider,
+			name,
+			username,
+			avatar,
+			sessionId: null
+		});
+		return { data };
+	} catch (e) {
+		return { data: null, error: parseErrorFromResponse(e) };
+	}
 }
