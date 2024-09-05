@@ -1,7 +1,7 @@
 <script lang="ts">
 	import UserDropdown from '$lib/auth/common/user-dropdown.svelte';
 
-	import NotificationPopover from '../notifications/components/notification-popover.svelte';
+	import NotificationPopover from '../../(notifications)/notifications/components/notification-popover.svelte';
 
 	import SideNavigationSheet from './side-navigation-sheet.svelte';
 </script>

@@ -3,9 +3,9 @@
 	import Seo from '$lib/components/common/seo.svelte';
 	import { LL } from '$lib/i18n/i18n-svelte';
 
-	import Loader from './components/loader.svelte';
-	import SideNavigations from './components/side-navigations.svelte';
-	import TopNavigationsBar from './components/top-navigations-bar.svelte';
+	import Loader from './common/components/loader.svelte';
+	import SideNavigations from './common/components/side-navigations.svelte';
+	import TopNavigationsBar from './common/components/top-navigations-bar.svelte';
 </script>
 
 <Seo

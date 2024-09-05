@@ -6,7 +6,7 @@ import { superValidate } from 'sveltekit-superforms/server';
 import { api } from '$convex/_generated/api';
 import { formSchema } from '$lib/auth/login/schema';
 import { client } from '$lib/convex';
-import { resend } from '$routes/services/email.service';
+import { resend } from '$routes/(email)/services/email.service';
 
 import type { Actions, PageServerLoad } from './$types';
 
